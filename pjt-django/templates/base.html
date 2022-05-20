@@ -12,27 +12,46 @@
 
     <!-- Example Code -->
     
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark mb-5">
       <div class="container-fluid">
-        <a class="navbar-brand text-white" href="#">Movies</a>
+        <a class="navbar-brand text-white" href="{% url 'movies:index'%}">Movies</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Hello, User</h5>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">          
+          <div class="offcanvas-header flex-column">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            {% if user.is_authenticated %}          
+            <h5 class="offcanvas-title fs-1 mt-1" id="offcanvasNavbarLabel">Hello, {{ user.username }}</h5>
+            {% else %}      
+            <h6 class="offcanvas-title fs-1 mt-1" id="offcanvasNavbarLabel">Please, Login</h6>      
+            {% endif %}
           </div>
           <div class="offcanvas-body ">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              {% if user.is_authenticated %}  
               <li class="nav-item">
-                <a class="nav-link active text-dark" aria-current="page" href="#">Home</a>
+                <a class="nav-link active text-dark" aria-current="page" href="#" style="margin-left: 5px;">My Profile</a>
+              </li>                
+              <form action="{% url 'accounts:logout' %}" method="POST">
+                {% csrf_token %}
+                <input class="bg-transparent text-dark border-0 text-start"type="submit" value="Logout">
+              </form>
+              <hr>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link active text-dark text-decoration-none" aria-current="page" href="{% url 'accounts:signup' %}" style="margin-left: 5px;">Sign Up</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Login</a>
+                <a class="nav-link active text-dark text-decoration-none" aria-current="page" href="{% url 'accounts:login' %}" style="margin-left: 5px;">Login</a>
               </li>
+              <hr>
+              {% endif %}             
+              <li class="nav-item">
+                <a class="nav-link active text-dark" aria-current="page" href="{% url 'movies:index'%}" style="margin-left: 5px;">Home</a>
+              </li>             
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-dark" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-dark" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left: 5px;">
                   Qizzes
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
