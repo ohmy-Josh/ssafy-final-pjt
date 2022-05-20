@@ -1,128 +1,216 @@
+from pprint import pprint
 import requests
 import json
 from collections import OrderedDict
+import urllib.request
 
 # TMDB API 
 TMDB_TOP_URL = 'https://api.themoviedb.org/3/movie/top_rated'
-TMDB_API = ''
+TMDB_API = '05331f044ea25f9c5d63cda187d08a2a'
+
+# KMDB API 
+KMDB_URL = 'http://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_json2.jsp?'
+KMDB_API = 'UM30MB478HW333CC5LPR'
+
+# YOUTUBE API ('https://www.youtube.com/embed/' + video_id)
+YOUTUBE_URL = 'https://www.googleapis.com/youtube/v3/search'
+YOUTUBE_API = 'AIzaSyAKwE_Pzl_CSP8wStqZYf4unklt9VH1IFc'
 
 # NAVER API
 NAVER_MOVIE_URL = 'https://openapi.naver.com/v1/search/movie.json'
 NAVER_HEADERS = {
-    'X-Naver-Client-Id': '',
-    'X-Naver-Client-Secret': '',
+    'X-Naver-Client-Id': 'oaTKpVAjfWHNCp4akRpt',
+    'X-Naver-Client-Secret': '5jKnOLvr7V',
 }
 
-model_movies = []
-model_directors = []
-model_actors = []
-actors_dict = { 'dict_length': 0, }
-directors_dict = { 'dict_length': 0,}
-movies_num = 0
+def papago_translate(name):
+    encText = urllib.parse.quote(name)
+    data = "source=en&target=ko&text=" + encText
+    url = "https://openapi.naver.com/v1/papago/n2mt"
+    request = urllib.request.Request(url)
+    request.add_header("X-Naver-Client-Id",NAVER_HEADERS['X-Naver-Client-Id'])
+    request.add_header("X-Naver-Client-Secret",NAVER_HEADERS['X-Naver-Client-Secret'])
+    response = urllib.request.urlopen(request, data=data.encode("utf-8"))
+    rescode = response.getcode()
+    if(rescode==200):
+        response_body = response.read()
+        return response_body.decode('utf-8')
+    else:
+        return
 
-tmdb_data = []
 
-for i in range(1, 51): # 20 * 50 page
+# TMDB movie credit
+def get_tmdb_top_rated_movie(page = 1):
+    tmdb_data = []
+    for i in range(1, page+1):
+        tmdb_top_params = {
+            'api_key' : TMDB_API, 
+            'language' : 'ko-KR', 
+            'page': i ,
+        }
+        tmdb_response = requests.get(TMDB_TOP_URL, params=tmdb_top_params)
+        tmdb_data += tmdb_response.json()['results']
+
+    return tmdb_data
+
+
+# TMDB movie credit
+def get_tmdb_movie_credit(movie_id):
+    TMDB_CREDIT_URL = f'https://api.themoviedb.org/3/movie/{movie_id}/credits'
     tmdb_params = {
         'api_key' : TMDB_API, 
         'language' : 'ko-KR', 
-        'page' : i, 
+    }
+    tmdb_credit_response = requests.get(TMDB_CREDIT_URL, params=tmdb_params)
+    credit = {
+        'actors': tmdb_credit_response.json()['cast'],
+        'directors': [crew for crew in tmdb_credit_response.json()['crew'] if crew['job']=='Director'],
+    }
+    return credit 
+
+
+# KMDB credit
+def kmdb_credit(movie):
+    credit_kr = {
+        'actors': {},
+        'directors':  {},
     }
 
-    tmdb_response = requests.get(TMDB_TOP_URL, params=tmdb_params)
-    tmdb_data += tmdb_response.json()['results']
+    if '"' in movie['title'] \
+        or "'" in movie['title'] \
+        or '!' in movie['title']:
+        return credit_kr
 
-for movie in tmdb_data:
-    # TMDB CREDIT
-    movie_id = movie['id']
-    TMDB_CREDIT_URL = f'https://api.themoviedb.org/3/movie/{movie_id}/credits'
-    response = requests.get(TMDB_CREDIT_URL, params=tmdb_params)
-    
-    # actor object 확인 후 추가
-    actors = []    
-    for cast in response.json()['cast']:
-        actor_id = cast['id']
-        if actor_id in actors_dict:
-            actor_pk = actors_dict[actor_id]
+    else:
+        # KMDB   
+        kmdb_params = {
+            'collection': 'kmdb_new2',
+            'ServiceKey': KMDB_API,
+            'query' : movie['title'], 
+            'detail' : 'Y',
+            'createDts' : movie['release_date'][:4], 
+            'createDte' : movie['release_date'][:4], 
+        }
+        kmdb_response = requests.get(KMDB_URL, params=kmdb_params)
+        
+        if 'Result' not in kmdb_response.json()['Data'][0]:
+            return credit_kr
+
+        actors_kr = kmdb_response.json()['Data'][0]['Result'][0]['actors']['actor']
+        directors_kr = kmdb_response.json()['Data'][0]['Result'][0]['directors']['director']
+
+        actors_kr = dict((actor['actorEnNm'], actor['actorNm']) for actor in actors_kr if actor.get('actorEnNm', ''))
+        directors_kr = dict((director['directorEnNm'] if director['directorEnNm'] else idx, director['directorNm']) for idx, director in enumerate(directors_kr))
+
+    credit_kr = {
+        'actors': actors_kr,
+        'directors':  directors_kr,
+    }
+
+    return credit_kr
+
+
+def credit_process(key):
+    pk_list = []
+    for person in credit[key]:
+        id = person['id']
+        if id in models_dict[key]:
+            pk = models_dict[key][id]
         else:
-            actors_dict['dict_length'] += 1
-            actor_pk = actors_dict['dict_length']
-            actors_dict[actor_id] = actor_pk
-            model_actor = OrderedDict()
-            model_actor['model'] = 'movies.actor'
-            model_actor['pk'] = actor_pk
-            model_actor['fields'] =  {'name': cast['name'],}
-            model_actors.append(model_actor)
+            models_dict[key]['num'] += 1
+            pk = models_dict[key]['num']
+            models_dict[key][id] = pk
 
-        actors.append(actor_pk)
+            model_tmp = OrderedDict()
+            model_tmp['model'] = f'movies.{key[:-1]}'
+            model_tmp['pk'] = pk
+            
+            name_kr = credit_kr[key].get(person['name'], '')
+            if key == 'directors' and not name_kr and len(credit_kr[key]) == 1:
+                name_kr = list(credit_kr[key].values())[0]
 
-    # director object 확인 후 추가
-    directors = []
-    for crew in response.json()['crew']:
-        if crew['job'] == 'Director':
-            director_id = crew['id']
-            if director_id in directors_dict:
-                director_pk = directors_dict[director_id]
-            else:
-                directors_dict['dict_length'] += 1
-                director_pk = directors_dict['dict_length']
-                directors_dict[director_id] = director_pk
-                model_director = OrderedDict()
-                model_director['model'] = 'movies.director'
-                model_director['pk'] = int(director_pk)
-                model_director['fields'] =  {'name': crew['name'],}
-                model_directors.append(model_director)
+            model_tmp['fields'] =  {
+                'name': person['name'],
+                'name_kr': name_kr,
+                }
+            models[key].append(model_tmp)
 
-            directors.append(director_pk)
-    
-    # NAVER searcj > movie    
-    naver_params = {
-        'query' : movie['title'], 
-        'yearfrom' : movie['release_date'][:4], 
-        'yearto' : movie['release_date'][:4], 
+        pk_list.append(pk)
+
+    return pk_list
+
+
+def youtube_search_trailer(title, ko = True):
+    trailer = '예고편' if ko else 'trailer'
+    youtube_params = {
+        'key' : YOUTUBE_API, 
+        'part' : 'snippet', 
+        'q' : title + trailer, 
     }
-    
-    naver_response = requests.get(NAVER_MOVIE_URL, headers = NAVER_HEADERS, params=naver_params)
-    
-    if not naver_response.json()['items']:
-        continue
-    naver_data = naver_response.json()['items'][0]
-    directors_kr = ', '.join(list(a for a in naver_data['director'].split('|') if a))
-    actors_kr = ', '.join(list(a for a in naver_data['actor'].split('|') if a))
 
-    movies_num += 1
-    
+    youtube_response = requests.get(YOUTUBE_URL, params=youtube_params)
+    videoId = youtube_response.json()['items'][0]['id']['videoId']
+
+    return  videoId
+
+def movie_process(movie, movie_pk):
     # movie object 생성
     model_movie = OrderedDict()
     
     model_movie['model'] = 'movies.movie'
-    model_movie['pk'] = movies_num
+    model_movie['pk'] = movie_pk
     model_movie['fields'] = {
             'title': movie['title'],
-            'overview': movie['overview'],
             'backdrop_path': movie['backdrop_path'],
             'poster_path': movie['poster_path'],
+            'trailer_path': '', # youtube_search_trailer(movie['original_title'], ko = movie['original_language'] == 'ko'),
             'release_date': movie['release_date'],
             'vote_average': movie['vote_average'],
+            'overview': movie['overview'],
             'directors': directors,
             'actors': actors,
-            'directors_kr': directors_kr,
-            'actors_kr': actors_kr,
-            'userRating': naver_data['userRating'],
     }
 
-    model_movies.append(model_movie)
-    if movies_num % 50 == 0:
-        print(f'{movies_num}번째 영화')
+    models['movies'].append(model_movie)
+    return
 
-# Write JSON
-with open('fixtures/movies/movies.json', 'w', encoding="utf-8") as make_file:
-    json.dump(model_movies, make_file, ensure_ascii=False, indent="\t")
+models = {
+    'movies': [],
+    'actors': [],
+    'directors': [],}
 
-with open('fixtures/movies/actors.json', 'w', encoding="utf-8") as make_file:
-    json.dump(model_actors, make_file, ensure_ascii=False, indent="\t")
+models_dict = {
+    'movies': 0,
+    'actors': {'num': 0,},
+    'directors': {'num': 0,},
+}
 
-with open('fixtures/movies/directors.json', 'w', encoding="utf-8") as make_file:
-    json.dump(model_directors, make_file, ensure_ascii=False, indent="\t")
+tmdb_movies = get_tmdb_top_rated_movie(page = 20)
 
-# python manage.py loaddata fixtures/movies/actors.json fixtures/movies/movies.json fixtures/movies/directors.json
+for movie in tmdb_movies:
+    if not movie['overview']:
+        continue
+
+    credit = get_tmdb_movie_credit(movie['id'])
+    credit_kr = kmdb_credit(movie)
+
+    actors = credit_process('actors')
+    directors = credit_process('directors')
+
+    models_dict['movies'] += 1
+    movie_pk = models_dict['movies']
+    movie_process(movie, movie_pk)
+
+    if movie_pk % 50 == 0:
+        print(f'{movie_pk}번째 영화 완료')
+
+def write_json(key):
+    with open(f'fixtures/movies/{key}.json', 'w', encoding="utf-8") as make_file:
+        json.dump(models[key], make_file, ensure_ascii=False, indent="\t")
+
+    print(f'{key} 모델 json 파일 생성 완료')
+    return 
+
+write_json('movies')
+write_json('actors')
+write_json('directors')
