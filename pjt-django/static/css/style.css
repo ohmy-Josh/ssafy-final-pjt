@@ -1,3 +1,26 @@
+.main-container {
+  /* default */
+  transform: scale(1); 
+  /*  크롬 */
+  -webkit-transform: scale(1);
+  /* FireFox */
+  -moz-transform: scale(1);
+
+  -ms-transform: scale(1);
+  /* Opera */
+  -o-transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.main-container:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+
 .play-btn {
   position:absolute;
   bottom:10px;
@@ -13,11 +36,8 @@
   transition:all .3s linear;
 }
 
-.card-main-body:hover .darkness{
-  opacity:0.4;
-}
 
-.card-main-body:hover .play-btn {
+.card-img-overlay:hover .play-btn {
   opacity:1;
   transform:scale(1);
 }
