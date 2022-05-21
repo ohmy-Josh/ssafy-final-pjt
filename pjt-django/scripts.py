@@ -214,3 +214,5 @@ def write_json(key):
 write_json('movies')
 write_json('actors')
 write_json('directors')
+
+# python manage.py loaddata fixtures/movies/actors.json fixtures/movies/movies.json fixtures/movies/directors.json
