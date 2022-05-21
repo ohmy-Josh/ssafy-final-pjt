@@ -6,21 +6,21 @@ import urllib.request
 
 # TMDB API 
 TMDB_TOP_URL = 'https://api.themoviedb.org/3/movie/top_rated'
-TMDB_API = '05331f044ea25f9c5d63cda187d08a2a'
+TMDB_API = ''
 
 # KMDB API 
 KMDB_URL = 'http://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_json2.jsp?'
-KMDB_API = 'UM30MB478HW333CC5LPR'
+KMDB_API = ''
 
 # YOUTUBE API ('https://www.youtube.com/embed/' + video_id)
 YOUTUBE_URL = 'https://www.googleapis.com/youtube/v3/search'
-YOUTUBE_API = 'AIzaSyAKwE_Pzl_CSP8wStqZYf4unklt9VH1IFc'
+YOUTUBE_API = ''
 
 # NAVER API
 NAVER_MOVIE_URL = 'https://openapi.naver.com/v1/search/movie.json'
 NAVER_HEADERS = {
-    'X-Naver-Client-Id': 'oaTKpVAjfWHNCp4akRpt',
-    'X-Naver-Client-Secret': '5jKnOLvr7V',
+    'X-Naver-Client-Id': '',
+    'X-Naver-Client-Secret': '',
 }
 
 def papago_translate(name):
