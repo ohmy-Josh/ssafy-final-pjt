@@ -3,6 +3,7 @@
 		"model": "movies.director",
 		"pk": 1,
 		"fields": {
+			"director_id": 4027,
 			"name": "Frank Darabont",
 			"name_kr": "프랭크 다라본트"
 		}
@@ -11,6 +12,7 @@
 		"model": "movies.director",
 		"pk": 2,
 		"fields": {
+			"director_id": 35771,
 			"name": "Aditya Chopra",
 			"name_kr": "아딧야 초프라"
 		}
@@ -19,6 +21,7 @@
 		"model": "movies.director",
 		"pk": 3,
 		"fields": {
+			"director_id": 1776,
 			"name": "Francis Ford Coppola",
 			"name_kr": "프란시스 포드 코폴라"
 		}
@@ -27,175 +30,197 @@
 		"model": "movies.director",
 		"pk": 4,
 		"fields": {
-			"name": "Steven Spielberg",
-			"name_kr": "스티븐 스필버그"
+			"director_id": 1317730,
+			"name": "Daniel Scheinert",
+			"name_kr": ""
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 5,
 		"fields": {
-			"name": "Shouko Nakamura",
-			"name_kr": "나카무라 쇼코"
+			"director_id": 1383612,
+			"name": "Daniel Kwan",
+			"name_kr": ""
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 6,
 		"fields": {
-			"name": "Hayao Miyazaki",
-			"name_kr": "미야자키 하야오"
+			"director_id": 488,
+			"name": "Steven Spielberg",
+			"name_kr": "스티븐 스필버그"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 7,
 		"fields": {
-			"name": "Makoto Shinkai",
-			"name_kr": "신카이 마코토"
+			"director_id": 1549377,
+			"name": "Shouko Nakamura",
+			"name_kr": "나카무라 쇼코"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 8,
 		"fields": {
-			"name": "Bong Joon-ho",
-			"name_kr": "봉준호"
+			"director_id": 608,
+			"name": "Hayao Miyazaki",
+			"name_kr": "미야자키 하야오"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 9,
 		"fields": {
-			"name": "Sidney Lumet",
-			"name_kr": "시드니 루멧"
+			"director_id": 74091,
+			"name": "Makoto Shinkai",
+			"name_kr": "신카이 마코토"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 10,
 		"fields": {
-			"name": "Christopher Nolan",
-			"name_kr": "크리스토퍼 놀란"
+			"director_id": 21684,
+			"name": "Bong Joon-ho",
+			"name_kr": "봉준호"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 11,
 		"fields": {
-			"name": "Kotaro Tamura",
-			"name_kr": "타무라 코타로"
+			"director_id": 39996,
+			"name": "Sidney Lumet",
+			"name_kr": "시드니 루멧"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 12,
 		"fields": {
-			"name": "Quentin Tarantino",
-			"name_kr": "쿠엔틴 타란티노"
+			"director_id": 525,
+			"name": "Christopher Nolan",
+			"name_kr": "크리스토퍼 놀란"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 13,
 		"fields": {
-			"name": "Sergio Leone",
-			"name_kr": "세르지오 레오네"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 14,
-		"fields": {
-			"name": "Peter Jackson",
-			"name_kr": "피터 잭슨"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 15,
-		"fields": {
+			"director_id": 1484773,
 			"name": "Taichi Ishidate",
 			"name_kr": "이시다테 타이치"
 		}
 	},
 	{
 		"model": "movies.director",
+		"pk": 14,
+		"fields": {
+			"director_id": 138,
+			"name": "Quentin Tarantino",
+			"name_kr": "쿠엔틴 타란티노"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 15,
+		"fields": {
+			"director_id": 108,
+			"name": "Peter Jackson",
+			"name_kr": "피터 잭슨"
+		}
+	},
+	{
+		"model": "movies.director",
 		"pk": 16,
 		"fields": {
-			"name": "Robert Zemeckis",
-			"name_kr": "로버트 저메키스"
+			"director_id": 577473,
+			"name": "Lee Kae-byeok",
+			"name_kr": "곽민승"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 17,
 		"fields": {
-			"name": "Takahiro Miki",
-			"name_kr": "미키 타카히로"
+			"director_id": 230360,
+			"name": "Kwon Soo-kyung",
+			"name_kr": "이준"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 18,
 		"fields": {
-			"name": "Giuseppe Tornatore",
-			"name_kr": "주세페 토르나또레"
+			"director_id": 240802,
+			"name": "Park Jung-woo",
+			"name_kr": ""
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 19,
 		"fields": {
-			"name": "Akira Kurosawa",
-			"name_kr": "구로사와 아키라"
+			"director_id": 125426,
+			"name": "Lee Eon-hee",
+			"name_kr": "이언희"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 20,
 		"fields": {
-			"name": "Martin Scorsese",
-			"name_kr": "마틴 스코세이지"
+			"director_id": 1121891,
+			"name": "Cho Ui-seok",
+			"name_kr": "자레드 헤스"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 21,
 		"fields": {
-			"name": "Roberto Benigni",
-			"name_kr": "로베르토 베니니"
+			"director_id": 150122,
+			"name": "Hong Ji-young",
+			"name_kr": "홍지영"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 22,
 		"fields": {
-			"name": "Masaki Kobayashi",
-			"name_kr": ""
+			"director_id": 1059129,
+			"name": "Han Jae-rim",
+			"name_kr": "잭 브라프"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 23,
 		"fields": {
-			"name": "Alfred Hitchcock",
-			"name_kr": "알프레드 히치콕"
+			"director_id": 1863287,
+			"name": "Kim Sung-hoon",
+			"name_kr": ""
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 24,
 		"fields": {
-			"name": "Isao Takahata",
-			"name_kr": "다카하타 이사오"
+			"director_id": 117370,
+			"name": "Bae Jong",
+			"name_kr": "박광현"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 25,
 		"fields": {
-			"name": "Hideaki Anno",
+			"director_id": 1294930,
+			"name": "Kim Tae-yun",
 			"name_kr": ""
 		}
 	},
@@ -203,62 +228,70 @@
 		"model": "movies.director",
 		"pk": 26,
 		"fields": {
-			"name": "Miloš Forman",
-			"name_kr": "밀러스 포먼"
+			"director_id": 225240,
+			"name": "Lee Soo-youn",
+			"name_kr": ""
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 27,
 		"fields": {
-			"name": "David Fincher",
-			"name_kr": "데이비드 핀처"
+			"director_id": 1109635,
+			"name": "Na Hyun",
+			"name_kr": "브라이언 카발라로"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 28,
 		"fields": {
-			"name": "Naoko Yamada",
-			"name_kr": "야마다 나오코"
+			"director_id": 1797138,
+			"name": "Kim Hyung-joo",
+			"name_kr": "크리스토퍼 포베스"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 29,
 		"fields": {
-			"name": "Rodney Rothman",
-			"name_kr": "로드니 로스만"
+			"director_id": 1294594,
+			"name": "Moon Hyun-sung",
+			"name_kr": ""
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 30,
 		"fields": {
-			"name": "Peter Ramsey",
-			"name_kr": "피터 램지"
+			"director_id": 573790,
+			"name": "Park In-je",
+			"name_kr": "박인제"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 31,
 		"fields": {
-			"name": "Bob Persichetti",
-			"name_kr": "밥 퍼시케티"
+			"director_id": 1522848,
+			"name": "Lee Chang-jae",
+			"name_kr": "이창재"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 32,
 		"fields": {
-			"name": "Fernando Meirelles",
-			"name_kr": "페르난도 메이렐레스"
+			"director_id": 548646,
+			"name": "Jung Byung-gil",
+			"name_kr": "정병길"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 33,
 		"fields": {
+			"director_id": 126809,
 			"name": "Lee Joon-ik",
 			"name_kr": "이준익"
 		}
@@ -267,1944 +300,135 @@
 		"model": "movies.director",
 		"pk": 34,
 		"fields": {
-			"name": "Kazuya Tsurumaki",
-			"name_kr": ""
+			"director_id": 1827112,
+			"name": "Cho Sun-ho",
+			"name_kr": "츠네히로 죠타"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 35,
 		"fields": {
-			"name": "Irvin Kershner",
-			"name_kr": "어빈 캐슈너"
+			"director_id": 86325,
+			"name": "Ryoo Seung-wan",
+			"name_kr": "카와사키  !HS 군 !HE 지"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 36,
 		"fields": {
-			"name": "Takahiro Omori",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 37,
-		"fields": {
-			"name": "Billy Wilder",
-			"name_kr": "빌리 와일더"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 38,
-		"fields": {
-			"name": "Tomm Moore",
-			"name_kr": "톰 무어"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 39,
-		"fields": {
-			"name": "Ross Stewart",
-			"name_kr": "로스 스튜어트"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 40,
-		"fields": {
-			"name": "Roman Polanski",
-			"name_kr": "로만 폴란스키"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 41,
-		"fields": {
-			"name": "Damien Chazelle",
-			"name_kr": "윌리엄 H. 마시"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 42,
-		"fields": {
-			"name": "Tony Kaye",
-			"name_kr": "토니 케이"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 43,
-		"fields": {
-			"name": "Charlie Chaplin",
-			"name_kr": "찰리 채플린"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 44,
-		"fields": {
-			"name": "Haruo Sotozaki",
-			"name_kr": "소토자키 하루오"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 45,
-		"fields": {
-			"name": "Souichi Masui",
-			"name_kr": "마스이 소이치"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 46,
-		"fields": {
-			"name": "Hikaru Yamaguchi",
-			"name_kr": "야마구치 히카루"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 47,
-		"fields": {
-			"name": "Elem Klimov",
-			"name_kr": "엘렘 클리모브"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 48,
-		"fields": {
-			"name": "Derek Tsang",
-			"name_kr": "증국상"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 49,
-		"fields": {
-			"name": "Jonathan Demme",
-			"name_kr": "조나단 드미"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 50,
-		"fields": {
-			"name": "Kenji Nagasaki",
-			"name_kr": "나가사키 켄지"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 51,
-		"fields": {
-			"name": "Peter Weir",
-			"name_kr": "피터 위어"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 52,
-		"fields": {
-			"name": "Thomas Kail",
-			"name_kr": "스콧 스피어"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 53,
-		"fields": {
-			"name": "Justin Baldoni",
-			"name_kr": "저스틴 밸도니"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 54,
-		"fields": {
-			"name": "Luc Besson",
-			"name_kr": "장 끌로드 반담"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 55,
-		"fields": {
-			"name": "Matt Peters",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 56,
-		"fields": {
-			"name": "Christina Sotta",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 57,
-		"fields": {
-			"name": "Stanley Kubrick",
-			"name_kr": "스탠리 큐브릭"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 58,
-		"fields": {
-			"name": "Yasujirō Ozu",
-			"name_kr": "오즈 야스지로"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 59,
-		"fields": {
-			"name": "Takaomi Kanasaki",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 60,
-		"fields": {
-			"name": "Mitja Okorn",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 61,
-		"fields": {
-			"name": "Rebecca Sugar",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 62,
-		"fields": {
-			"name": "Hiroshi Teshigahara",
-			"name_kr": "테시가하라 히로시"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 63,
-		"fields": {
-			"name": "Ettore Scola",
-			"name_kr": "에토르 스콜라"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 64,
-		"fields": {
-			"name": "Anthony Russo",
-			"name_kr": "안소니 루소"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 65,
-		"fields": {
-			"name": "Joe Russo",
-			"name_kr": "조 루소"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 66,
-		"fields": {
-			"name": "Simon Curtis",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 67,
-		"fields": {
-			"name": "Zack Snyder",
-			"name_kr": " !HS 잭 !HE   !HS 스나이더 !HE "
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 68,
-		"fields": {
-			"name": "Satoshi Kon",
-			"name_kr": "곤 사토시"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 69,
-		"fields": {
-			"name": "Mehmet Ada Öztekin",
-			"name_kr": "누엘 크리소스토모 나발"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 70,
-		"fields": {
-			"name": "Xavier Dolan",
-			"name_kr": "장 마리 스트라우브"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 71,
-		"fields": {
-			"name": "Sergio Pablos",
-			"name_kr": "폴 베억"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 72,
-		"fields": {
-			"name": "Ingmar Bergman",
-			"name_kr": "잉마르 베르히만"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 73,
-		"fields": {
-			"name": "Park Chan-wook",
-			"name_kr": "박찬욱"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 74,
-		"fields": {
-			"name": "Jacques Becker",
-			"name_kr": "자크 베케르"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 75,
-		"fields": {
-			"name": "Vittorio De Sica",
-			"name_kr": "비토리오 데 시카"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 76,
-		"fields": {
-			"name": "Mamoru Hosoda",
-			"name_kr": "호소다 마모루"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 77,
-		"fields": {
-			"name": "Éric Toledano",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 78,
-		"fields": {
-			"name": "Olivier Nakache",
-			"name_kr": "올리비에 나카셰"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 79,
-		"fields": {
-			"name": "Dino Risi",
-			"name_kr": "디노 리시"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 80,
-		"fields": {
-			"name": "Frank Capra",
-			"name_kr": "프랑크 카프라"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 81,
-		"fields": {
-			"name": "Ashley Avis",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 82,
-		"fields": {
-			"name": "Roger Allers",
-			"name_kr": "로저 알러스"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 83,
-		"fields": {
-			"name": "Rob Minkoff",
-			"name_kr": "롭 민코프"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 84,
-		"fields": {
-			"name": "Haruka Fujita",
-			"name_kr": "후지타 하루카"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 85,
-		"fields": {
-			"name": "Shinichiro Ushijima",
-			"name_kr": "우시지마 신이치로"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 86,
-		"fields": {
-			"name": "Mari Okada",
-			"name_kr": "오카다 마리"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 87,
-		"fields": {
-			"name": "Andrei Tarkovsky",
-			"name_kr": "안드레이 타르코프스키"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 88,
-		"fields": {
-			"name": "Kenji Mizoguchi",
-			"name_kr": "미조구치 겐지"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 89,
-		"fields": {
-			"name": "Peter Farrelly",
-			"name_kr": "피터 파렐리"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 90,
-		"fields": {
-			"name": "Ethan Spaulding",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 91,
-		"fields": {
-			"name": "Nick Hurran",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 92,
-		"fields": {
-			"name": "Federico Fellini",
-			"name_kr": "페데리코 펠리니"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 93,
-		"fields": {
-			"name": "Zhao Ji",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 94,
-		"fields": {
-			"name": "Elio Petri",
-			"name_kr": "엘리오 페트리"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 95,
-		"fields": {
-			"name": "Lee Unkrich",
-			"name_kr": "제제 타카히사"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 96,
-		"fields": {
-			"name": "Marcel Carné",
-			"name_kr": "마르셀 까르네"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 97,
-		"fields": {
-			"name": "Céline Sciamma",
-			"name_kr": "셀린 사아마"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 98,
-		"fields": {
-			"name": "George Tillman, Jr.",
-			"name_kr": "조지 틸만 주니어"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 99,
-		"fields": {
-			"name": "Luca Guadagnino",
-			"name_kr": "루카 구아다니노"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 100,
-		"fields": {
-			"name": "Bo Burnham",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 101,
-		"fields": {
-			"name": "Alan Barillaro",
-			"name_kr": "멜 깁슨"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 102,
-		"fields": {
-			"name": "George Lucas",
-			"name_kr": "조지 루카스"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 103,
-		"fields": {
-			"name": "Bryan Singer",
-			"name_kr": "브라이언 싱어"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 104,
-		"fields": {
-			"name": "Ridley Scott",
-			"name_kr": "리들리 스콧"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 105,
-		"fields": {
-			"name": "Joseph L. Mankiewicz",
-			"name_kr": "조셉 L. 맨케비츠"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 106,
-		"fields": {
-			"name": "Pete Docter",
-			"name_kr": "피터 닥터"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 107,
-		"fields": {
-			"name": "Lilly Wachowski",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 108,
-		"fields": {
-			"name": "Lana Wachowski",
-			"name_kr": "래리 워쇼스키"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 109,
-		"fields": {
-			"name": "Fritz Lang",
-			"name_kr": "프리츠 랑"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 110,
-		"fields": {
-			"name": "Tate Taylor",
-			"name_kr": "테이트 테일러"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 111,
-		"fields": {
-			"name": "Nadine Labaki",
-			"name_kr": "나딘 라바키"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 112,
-		"fields": {
-			"name": "Stephen Chbosky",
-			"name_kr": "팻티 젠킨스"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 113,
-		"fields": {
-			"name": "Kim Yong-hwa",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 114,
-		"fields": {
-			"name": "Mel Gibson",
-			"name_kr": "멜 깁슨"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 115,
-		"fields": {
-			"name": "Ilya Naishuller",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 116,
-		"fields": {
-			"name": "Todd Phillips",
-			"name_kr": "토드 필립"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 117,
-		"fields": {
-			"name": "Stanley Donen",
-			"name_kr": "스탠리 도넌"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 118,
-		"fields": {
-			"name": "Gene Kelly",
-			"name_kr": "진 켈리"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 119,
-		"fields": {
-			"name": "Can Ulkay",
-			"name_kr": "예리 카를손"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 120,
-		"fields": {
-			"name": "Michael Curtiz",
-			"name_kr": "마이클 커티즈"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 121,
-		"fields": {
-			"name": "Florian Zeller",
-			"name_kr": "플로리안 젤러"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 122,
-		"fields": {
-			"name": "Ericson Core",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 123,
-		"fields": {
-			"name": "Brian De Palma",
-			"name_kr": "브라이언 드 팔마"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 124,
-		"fields": {
-			"name": "Guy Ritchie",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 125,
-		"fields": {
-			"name": "Buster Keaton",
-			"name_kr": "버스터 키튼"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 126,
-		"fields": {
-			"name": "Walter Salles",
-			"name_kr": "월터 살레스"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 127,
-		"fields": {
-			"name": "Craig Gillespie",
-			"name_kr": "크레이그 질레스피"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 128,
-		"fields": {
-			"name": "Jim Donovan",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 129,
-		"fields": {
-			"name": "Tim Johnson",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 130,
-		"fields": {
-			"name": "Gus Van Sant",
-			"name_kr": "구스 반 산트"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 131,
-		"fields": {
-			"name": "Mario Monicelli",
-			"name_kr": "마리오 모니셀리"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 132,
-		"fields": {
-			"name": "Christopher Storer",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 133,
-		"fields": {
-			"name": "Oriol Paulo",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 134,
-		"fields": {
-			"name": "Wim Wenders",
-			"name_kr": "빔 벤더스"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 135,
-		"fields": {
-			"name": "Jon Olb",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 136,
-		"fields": {
-			"name": "Madeleine Parry",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 137,
-		"fields": {
-			"name": "Satyajit Ray",
-			"name_kr": "사트야지트 레이"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 138,
-		"fields": {
-			"name": "Natalie Nourigat",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 139,
-		"fields": {
-			"name": "David Yates",
-			"name_kr": "데이빗 예이츠"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 140,
-		"fields": {
-			"name": "Paul Thomas Anderson",
-			"name_kr": "폴 토마스 앤더슨"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 141,
-		"fields": {
-			"name": "Wong Kar-wai",
-			"name_kr": "왕가위"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 142,
-		"fields": {
-			"name": "Martin McDonagh",
-			"name_kr": "마틴 맥도나"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 143,
-		"fields": {
-			"name": "Thomas Vinterberg",
-			"name_kr": "토마스 빈터버그"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 144,
-		"fields": {
-			"name": "Garth Davis",
-			"name_kr": "다미엔 차젤레"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 145,
-		"fields": {
-			"name": "Greg Berlanti",
-			"name_kr": "그렉 버랜티"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 146,
-		"fields": {
-			"name": "Michel Gondry",
-			"name_kr": "미셸 공드리"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 147,
-		"fields": {
-			"name": "Jon Watts",
-			"name_kr": "존 왓츠"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 148,
-		"fields": {
-			"name": "Mathieu Kassovitz",
-			"name_kr": "마띠유 카소비츠"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 149,
-		"fields": {
-			"name": "Denis Villeneuve",
-			"name_kr": "드니 빌뇌브"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 150,
-		"fields": {
-			"name": "Marco Tullio Giordana",
-			"name_kr": "마르코 튤리오 지오르데이너"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 151,
-		"fields": {
-			"name": "François Truffaut",
-			"name_kr": "프랑소와 트뤼포"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 152,
-		"fields": {
+			"director_id": 148747,
 			"name": "Jang Hoon",
 			"name_kr": "장훈"
 		}
 	},
 	{
 		"model": "movies.director",
-		"pk": 153,
+		"pk": 37,
 		"fields": {
-			"name": "Joe Wright",
-			"name_kr": "조 라이트"
+			"director_id": 1410322,
+			"name": "Kim Joo-hwan",
+			"name_kr": "김주환"
 		}
 	},
 	{
 		"model": "movies.director",
-		"pk": 154,
+		"pk": 38,
 		"fields": {
-			"name": "David Lynch",
-			"name_kr": "데이비드 린치"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 155,
-		"fields": {
-			"name": "Carl Theodor Dreyer",
-			"name_kr": "칼 데오도르 드레이어"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 156,
-		"fields": {
-			"name": "Marc Meyers",
-			"name_kr": "마크메이어스"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 157,
-		"fields": {
-			"name": "Taika Waititi",
-			"name_kr": "타이카 와이티티"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 158,
-		"fields": {
-			"name": "Emeric Pressburger",
-			"name_kr": "에머릭 프레스버거"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 159,
-		"fields": {
-			"name": "Michael Powell",
-			"name_kr": "마이클 파웰"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 160,
-		"fields": {
-			"name": "Garth Jennings",
-			"name_kr": "가스 제닝스"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 161,
-		"fields": {
-			"name": "Wolfgang Petersen",
-			"name_kr": "볼프강 페터센"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 162,
-		"fields": {
-			"name": "Miguel Sapochnik",
+			"director_id": 557736,
+			"name": "Park Hoon-jung",
 			"name_kr": ""
 		}
 	},
 	{
 		"model": "movies.director",
-		"pk": 163,
+		"pk": 39,
 		"fields": {
-			"name": "Sion Sono",
+			"director_id": 87894,
+			"name": "Shin-yeon Won",
 			"name_kr": ""
 		}
 	},
 	{
 		"model": "movies.director",
-		"pk": 164,
+		"pk": 40,
 		"fields": {
-			"name": "James Cameron",
-			"name_kr": "제임스 카메론"
+			"director_id": 24989,
+			"name": "Kim Hyun-suk",
+			"name_kr": "김현석"
 		}
 	},
 	{
 		"model": "movies.director",
-		"pk": 165,
+		"pk": 41,
 		"fields": {
-			"name": "Gail Mancuso",
-			"name_kr": "게일 맨쿠소"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 166,
-		"fields": {
-			"name": "Stanley Kramer",
-			"name_kr": "스탠리 크레이머"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 167,
-		"fields": {
-			"name": "Luchino Visconti",
-			"name_kr": "루키노 비스콘티"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 168,
-		"fields": {
-			"name": "Sarah Smith",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 169,
-		"fields": {
-			"name": "Jean-Philippe Vine",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 170,
-		"fields": {
-			"name": "Taylor Hackford",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 171,
-		"fields": {
-			"name": "Luis Buñuel",
-			"name_kr": "루이스 부뉴엘"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 172,
-		"fields": {
-			"name": "Dorota Kobiela",
-			"name_kr": "도로타 코비엘라"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 173,
-		"fields": {
-			"name": "Hugh Welchman",
-			"name_kr": "휴 웰치먼"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 174,
-		"fields": {
-			"name": "Chris Appelhans",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 175,
-		"fields": {
-			"name": "Alessio Cremonini",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 176,
-		"fields": {
-			"name": "Andrew Stanton",
-			"name_kr": "앤드류 스탠튼"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 177,
-		"fields": {
-			"name": "Lenny Abrahamson",
-			"name_kr": "박소현"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 178,
-		"fields": {
-			"name": "Wes Anderson",
-			"name_kr": "웨스 앤더슨"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 179,
-		"fields": {
-			"name": "Florian Henckel von Donnersmarck",
-			"name_kr": "플로리안 헨켈 폰 도너스마르크"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 180,
-		"fields": {
-			"name": "Henri-Georges Clouzot",
-			"name_kr": "앙리 조르주 끄루조"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 181,
-		"fields": {
-			"name": "Marc Webb",
-			"name_kr": "마크 웹"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 182,
-		"fields": {
+			"director_id": 1294471,
 			"name": "Hwang Dong-hyuk",
 			"name_kr": "황동혁"
 		}
 	},
 	{
 		"model": "movies.director",
-		"pk": 183,
+		"pk": 42,
 		"fields": {
-			"name": "Theodore Melfi",
-			"name_kr": "데오도르 멜피"
+			"director_id": 1902848,
+			"name": "Kang Yun-sung",
+			"name_kr": "강윤성"
 		}
 	},
 	{
 		"model": "movies.director",
-		"pk": 184,
+		"pk": 43,
 		"fields": {
-			"name": "Clyde Bruckman",
-			"name_kr": ""
+			"director_id": 240016,
+			"name": "Jang Yoo-jung",
+			"name_kr": "장유정"
 		}
 	},
 	{
 		"model": "movies.director",
-		"pk": 185,
+		"pk": 44,
 		"fields": {
-			"name": "Anna Muylaert",
-			"name_kr": "안나 무이라에르트"
+			"director_id": 1895319,
+			"name": "Jang Chang-won",
+			"name_kr": "장창원"
 		}
 	},
 	{
 		"model": "movies.director",
-		"pk": 186,
+		"pk": 45,
 		"fields": {
-			"name": "George Roy Hill",
-			"name_kr": "조지 로이 힐"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 187,
-		"fields": {
-			"name": "José Padilha",
-			"name_kr": "호세 파딜라"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 188,
-		"fields": {
-			"name": "Robert Mulligan",
-			"name_kr": "로버트 멀리건"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 189,
-		"fields": {
-			"name": "Roberto Rossellini",
-			"name_kr": "로베르토 로셀리니"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 190,
-		"fields": {
-			"name": "Siân Heder",
-			"name_kr": "션 히더"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 191,
-		"fields": {
-			"name": "Karan Johar",
-			"name_kr": "카란 조하르"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 192,
-		"fields": {
-			"name": "Fisher Stevens",
-			"name_kr": "체이스  !HS 파머 !HE "
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 193,
-		"fields": {
-			"name": "Sunao Katabuchi",
-			"name_kr": "카타부치 스나오"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 194,
-		"fields": {
-			"name": "Russell Mulcahy",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 195,
-		"fields": {
-			"name": "Lee Hwan-kyung",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 196,
-		"fields": {
-			"name": "Amma Asante",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 197,
-		"fields": {
-			"name": "John Huston",
-			"name_kr": "존 휴스턴"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 198,
-		"fields": {
-			"name": "Hirokazu Kore-eda",
-			"name_kr": "고레에다 히로카즈"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 199,
-		"fields": {
-			"name": "Sam Mendes",
-			"name_kr": "샘 맨데스"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 200,
-		"fields": {
-			"name": "Luis Mandoki",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 201,
-		"fields": {
-			"name": "Mikhail Kalatozov",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 202,
-		"fields": {
-			"name": "Michael Cimino",
-			"name_kr": "마이클 치미노"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 203,
-		"fields": {
-			"name": "Darren Aronofsky",
-			"name_kr": "대런 아로노프스키"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 204,
-		"fields": {
-			"name": "Orson Welles",
-			"name_kr": "오슨 웰스"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 205,
-		"fields": {
-			"name": "Robert Bresson",
-			"name_kr": "로베르 브레송"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 206,
-		"fields": {
-			"name": "Michael Rianda",
-			"name_kr": "마이클 리안다"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 207,
-		"fields": {
-			"name": "John Carpenter",
-			"name_kr": "존 카펜터"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 208,
-		"fields": {
-			"name": "Alfonso Cuarón",
-			"name_kr": "알폰소 쿠아론"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 209,
-		"fields": {
-			"name": "Junichi Sato",
-			"name_kr": "사토 준이치"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 210,
-		"fields": {
-			"name": "Tomotaka Shibayama",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 211,
-		"fields": {
-			"name": "Morten Tyldum",
-			"name_kr": "모튼 틸덤"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 212,
-		"fields": {
-			"name": "Elia Kazan",
-			"name_kr": "엘리아 카잔"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 213,
-		"fields": {
-			"name": "Michelangelo Antonioni",
-			"name_kr": "강찬우"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 214,
-		"fields": {
-			"name": "Alan Parker",
-			"name_kr": "알란 파커"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 215,
-		"fields": {
-			"name": "Daniel Ribeiro",
-			"name_kr": "네드 벤슨"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 216,
-		"fields": {
-			"name": "John Kahrs",
-			"name_kr": "존 커스"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 217,
-		"fields": {
+			"director_id": 1771406,
 			"name": "Jang Hang-jun",
 			"name_kr": "장항준"
 		}
 	},
 	{
 		"model": "movies.director",
-		"pk": 218,
+		"pk": 46,
 		"fields": {
-			"name": "Juan José Campanella",
-			"name_kr": "후앙 호세 캄파넬라"
+			"director_id": 1285352,
+			"name": "Yang Woo-seok",
+			"name_kr": "양우석"
 		}
 	},
 	{
 		"model": "movies.director",
-		"pk": 219,
+		"pk": 47,
 		"fields": {
-			"name": "Lasse Hallström",
-			"name_kr": "라세 할스트롬"
+			"director_id": 84969,
+			"name": "Kim Yong-hwa",
+			"name_kr": "김용화"
 		}
 	},
 	{
 		"model": "movies.director",
-		"pk": 220,
+		"pk": 48,
 		"fields": {
-			"name": "Je-kyu Kang",
-			"name_kr": "강제규"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 221,
-		"fields": {
-			"name": "Clint Eastwood",
-			"name_kr": "클린트 이스트우드"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 222,
-		"fields": {
-			"name": "Victor Fleming",
-			"name_kr": "빅터 플레밍"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 223,
-		"fields": {
-			"name": "George Cukor",
-			"name_kr": "빅터 플레밍"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 224,
-		"fields": {
-			"name": "Sam Wood",
-			"name_kr": "빅터 플레밍"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 225,
-		"fields": {
-			"name": "Aamir Khan",
-			"name_kr": "아미르 칸"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 226,
-		"fields": {
-			"name": "Don Hall",
+			"director_id": 59879,
+			"name": "David Trueba",
 			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 227,
-		"fields": {
-			"name": "Carlos López Estrada",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 228,
-		"fields": {
-			"name": "Hiromasa Yonebayashi",
-			"name_kr": "요네바야시 히로마사"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 229,
-		"fields": {
-			"name": "Nitesh Tiwari",
-			"name_kr": "니테쉬 티와리"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 230,
-		"fields": {
-			"name": "James Mangold",
-			"name_kr": "제임스 맨골드"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 231,
-		"fields": {
-			"name": "Andaç Haznedaroğlu",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 232,
-		"fields": {
-			"name": "Antoine Blossier",
-			"name_kr": "앙트완 블로시에르"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 233,
-		"fields": {
-			"name": "Thor Freudenthal",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 234,
-		"fields": {
-			"name": "Carol Reed",
-			"name_kr": "캐럴 리드"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 235,
-		"fields": {
-			"name": "Lee Hae-jun",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 236,
-		"fields": {
-			"name": "Jay Oliva",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 237,
-		"fields": {
-			"name": "Rajkumar Hirani",
-			"name_kr": "라지쿠마르 히라니"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 238,
-		"fields": {
-			"name": "Pietro Germi",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 239,
-		"fields": {
-			"name": "Nattawut Poonpiriya",
-			"name_kr": "나타우트 폰피리야"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 240,
-		"fields": {
-			"name": "Danny Boyle",
-			"name_kr": "대니 보일"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 241,
-		"fields": {
-			"name": "Chris McKay",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 242,
-		"fields": {
-			"name": "Krzysztof Kieślowski",
-			"name_kr": "크쥐시토프 키에슬로프스키"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 243,
-		"fields": {
-			"name": "David Lean",
-			"name_kr": "데이빗 린"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 244,
-		"fields": {
-			"name": "Jean-Pierre Melville",
-			"name_kr": "장 피에르 멜빌"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 245,
-		"fields": {
-			"name": "Edward Sedgwick",
-			"name_kr": "에드워드 세즈윅"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 246,
-		"fields": {
-			"name": "Gillo Pontecorvo",
-			"name_kr": "길로 폰테코르보"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 247,
-		"fields": {
-			"name": "Robert Aldrich",
-			"name_kr": "로버트 알드리치"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 248,
-		"fields": {
-			"name": "Katsuhiro Otomo",
-			"name_kr": "후지타 토시야"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 249,
-		"fields": {
-			"name": "Zach Parrish",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 250,
-		"fields": {
-			"name": "John Lasseter",
-			"name_kr": "존 라세터"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 251,
-		"fields": {
-			"name": "Georges Méliès",
-			"name_kr": "조르쥬 멜리에스"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 252,
-		"fields": {
-			"name": "Robert Wiene",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 253,
-		"fields": {
-			"name": "Richard Linklater",
-			"name_kr": "리차드 링클래이터"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 254,
-		"fields": {
-			"name": "Destin Daniel Cretton",
-			"name_kr": "데스틴 크리튼"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 255,
-		"fields": {
-			"name": "Michael Radford",
-			"name_kr": "마이클 래드포드"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 256,
-		"fields": {
-			"name": "Majid Majidi",
-			"name_kr": "Bryan Spicer"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 257,
-		"fields": {
-			"name": "Yu Yang",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 258,
-		"fields": {
-			"name": "Steve McQueen",
-			"name_kr": "스티브 맥퀸"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 259,
-		"fields": {
-			"name": "Zhang Yimou",
-			"name_kr": "장예모"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 260,
-		"fields": {
-			"name": "John Sturges",
-			"name_kr": "존 스터지스"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 261,
-		"fields": {
-			"name": "Michael Gracey",
-			"name_kr": "마이클 그레이시"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 262,
-		"fields": {
-			"name": "Jean-Marc Vallée",
-			"name_kr": "장 마크 발레"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 263,
-		"fields": {
-			"name": "Enrico Casarosa",
-			"name_kr": "코지마 유키오"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 264,
-		"fields": {
-			"name": "M. Night Shyamalan",
-			"name_kr": "M. 나이트 샤말란"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 265,
-		"fields": {
-			"name": "José Luis Ucha",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 266,
-		"fields": {
-			"name": "Mark Fattibene",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 267,
-		"fields": {
-			"name": "Robert Cullen",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 268,
-		"fields": {
-			"name": "Abbas Kiarostami",
-			"name_kr": "압바스 키아로스타미"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 269,
-		"fields": {
-			"name": "Mel Brooks",
-			"name_kr": "멜 브룩스"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 270,
-		"fields": {
-			"name": "Vincent Paronnaud",
-			"name_kr": "뱅상 파로노"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 271,
-		"fields": {
-			"name": "Marjane Satrapi",
-			"name_kr": "마르얀 사트라피"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 272,
-		"fields": {
-			"name": "Tim Burton",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 273,
-		"fields": {
-			"name": "Richard LaGravenese",
-			"name_kr": "리차드 라그라베네스"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 274,
-		"fields": {
-			"name": "Chris Marker",
-			"name_kr": "크리스 마르케"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 275,
-		"fields": {
-			"name": "Chiwetel Ejiofor",
-			"name_kr": "치웨텔 에지오포"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 276,
-		"fields": {
-			"name": "Mamoru Oshii",
-			"name_kr": "오시이 마모루"
 		}
 	}
 ]
