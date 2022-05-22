@@ -3,7 +3,14 @@ from django.views.decorators.http import require_http_methods, require_GET, requ
 
 from .models import Movie, Actor, Director, Review
 from .forms import ReviewForm
+from packages.movies import youtube
 
+def get_trailers(movies):
+    for movie in movies:
+            if movie.trailer_path == '':
+                movie.trailer_path = youtube.youtube_search_trailer(movie.title, movie.original_language)
+                movie.save()
+    return
 
 @require_http_methods(['GET', 'POST'])
 def index(request):
@@ -12,6 +19,8 @@ def index(request):
         return
     else:
         movies = Movie.objects.filter(pk__lte = 12)     # 반환할 movie list 수정 필요
+        get_trailers(movies)
+
     context = {
         'movies': movies,
     }
@@ -28,11 +37,15 @@ def detail(request, movie_pk):
     reviews = movie.review_set.all()
 
     actor_movies, director_movies = Movie.objects.none(), Movie.objects.none()
+    # 관련 영화에서 detail 영화는 제거하기
     for actor in actors:
         actor_movies = actor_movies.union(actor.movies.all())
     for director in directors:
         director_movies = director_movies.union(director.movies.all())
-    
+
+    get_trailers(actor_movies)
+    get_trailers(director_movies)
+
     context = {
         'movie': movie,
         'actor_movies': actor_movies,
