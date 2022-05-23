@@ -3,13 +3,21 @@ from django.views.decorators.http import require_http_methods, require_GET, requ
 
 from .models import Movie, Actor, Director, Review
 from .forms import ReviewForm
-from packages.movies import youtube
+from packages.movies import youtube, naver
 
 def get_trailers(movies):
     for movie in movies:
             if movie.trailer_path == '':
                 movie.trailer_path = youtube.youtube_search_trailer(movie.original_title, movie.original_language)
                 movie.save()
+    return
+
+def get_name_kr(names):
+    for name in names:
+        if name.name_kr == '':
+            name.name_kr = naver.papago(name.name, 'en', 'ko')['message']['result']['translatedText']
+            name.save()
+
     return
 
 @require_http_methods(['GET', 'POST'])
@@ -39,15 +47,19 @@ def detail(request, movie_pk):
     actor_movies, director_movies = Movie.objects.none(), Movie.objects.none()
     # 관련 영화에서 detail 영화는 제거하기
     for actor in actors:
-        actor_movies = actor_movies.union(actor.movies.all())
+        actor_movies |= actor.movies.all()
     for director in directors:
-        director_movies = director_movies.union(director.movies.all())
-
-    actor_movies = actor_movies.exclude(pk_ = movie_pk)
-    director_movies = director_movies.exclude(pk_ = movie_pk)
+        director_movies |= director.movies.all()
+    
+    actor_movies = actor_movies.exclude(pk = movie_pk).distinct()
+    director_movies = director_movies.exclude(pk = movie_pk).distinct()
     
     get_trailers(actor_movies)
     get_trailers(director_movies)
+
+    if movie.original_language == 'ko':
+        get_name_kr(actors)
+        get_name_kr(directors)
 
     context = {
         'movie': movie,
