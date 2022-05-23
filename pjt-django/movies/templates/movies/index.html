@@ -17,17 +17,36 @@
   });
 </script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-<body style="background-color: 	white">   
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 ms-4">      
+<body style="background-color: 	white"> 
+  <div class="text-center mb-5">    
+    <img class="ratio border " src="https://img.freepik.com/free-vector/trendy-movie-time-concept-layout-with-film-projector-and-text-area-withlettring-quote-it-s-movie-time-cool-cinema-poster-leaflet-or-banner-template-with-detailed-retro-projector-with-film-reels_119217-1510.jpg?w=1380" alt="메인 페이지 이미지">
+  </div>  
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 ms-4">      
       {% for movie in movies  %}  
         <div class="main-container col mb-4">
-          <div class="img-container card bg-dark text-white" style="width: 17rem;">          
+          <div class="img-container card bg-dark text-white" style="width: 17rem;">    
             <img src={{ "https://www.themoviedb.org/t/p/w300_and_h450_bestv2"|add:movie.poster_path }} class="card-img img-thumbnail" alt="포스터 이미지">
-            <div class="card-img-overlay d-flex align-items-end">
-              <h5 class="text card-title">{{ movie.title }}</h5>
-              <button class="play-btn video-btn" data-bs-toggle="modal" data-bs-target="#exampleModal{{movie.pk}}"><i class="bi bi-play-circle fs-1" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; background-"></i></button>     
+            <div class="card-img-overlay d-flex align-items-end justify-content-center">              
+              <button class="play-btn video-btn" data-bs-toggle="modal" data-bs-target="#exampleModal{{movie.pk}}">
+                <i class="bi bi-play-circle fs-1" 
+                   style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"
+                   data-toggle="tooltip" 
+                   data-placement="top" 
+                   title="예고편 보기"
+                   >
+                  </i></button>     
+              <a 
+                class="text-reset card-title fw-bold text-decoration-none fs-4" 
+                href="{% url 'movies:detail' movie.pk %}"
+                data-toggle="tooltip" 
+                data-placement="top" 
+                title="자세히 보기"
+                >
+                  {{ movie.title }}
+              </a>
             </div>
           </div>
+          
         </div>    
       {% comment %} Modal {% endcomment %}
         <div class="modal fade bg-dark" id="exampleModal{{movie.pk}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
