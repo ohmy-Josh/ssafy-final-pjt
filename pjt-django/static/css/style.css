@@ -24,20 +24,17 @@
 .play-btn {
   position:absolute;
   bottom:10px;
-  right:10px;
-  background:red;
-  width:55px;
-  height:55px;
-  border-radius:50%;
-  text-align:center;
-  /* 추가된 부분 */
+  right:10px;     
   opacity:0;
   transform:scale(2);
-  transition:all .3s linear;
+  transition:all .4s linear;
+  background-color: transparent;
+  border: 0px;
+  color: white;
 }
 
 
 .card-img-overlay:hover .play-btn {
-  opacity:1;
+  opacity:2;
   transform:scale(1);
 }

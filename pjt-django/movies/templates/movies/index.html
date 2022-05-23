@@ -12,10 +12,10 @@
     {% for movie in movies  %}  
       <div class="main-container col mb-4">
         <div class="img-container card bg-dark text-white" style="width: 18rem;">          
-          <img src={{ "https://www.themoviedb.org/t/p/w300_and_h450_bestv2"|add:movie.poster_path }} class="card-img img-thumbnail" alt="...">
+          <img src={{ "https://www.themoviedb.org/t/p/w300_and_h450_bestv2"|add:movie.poster_path }} class="card-img img-thumbnail" alt="포스터 이미지">
           <div class="card-img-overlay d-flex align-items-end">
             <h5 class="text card-title">{{ movie.title }}</h5>
-            <button class="play-btn" data-bs-toggle="modal" data-bs-target="#exampleModal{{movie.pk}}">Play</button>     
+            <button class="play-btn" data-bs-toggle="modal" data-bs-target="#exampleModal{{movie.pk}}"><i class="bi bi-play-circle fs-1"></i></button>     
           </div>
         </div>
       </div>
@@ -29,7 +29,7 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              여기에서 영화 예고편이 나온다면?
+              <a href={{ "https://www.youtube.com/embed/"|add:movie.trailer_path }}></a>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

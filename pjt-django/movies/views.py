@@ -43,8 +43,8 @@ def detail(request, movie_pk):
     for director in directors:
         director_movies = director_movies.union(director.movies.all())
 
-    actor_movies = actor_movies.exclude(pk_ = movie_pk)
-    director_movies = director_movies.exclude(pk_ = movie_pk)
+    # actor_movies = actor_movies.exclude(pk_ = movie_pk)
+    # director_movies = director_movies.exclude(pk_ = movie_pk)
     
     get_trailers(actor_movies)
     get_trailers(director_movies)
