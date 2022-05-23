@@ -19,7 +19,7 @@ def credit_process(key):
             model_tmp['pk'] = pk
             
             name_kr = credit_kr[key].get(person['name'], '')
-
+            
             model_tmp['fields'] =  {
                 f'{key[:-1]}_id': person['id'],
                 'name': person['name'],

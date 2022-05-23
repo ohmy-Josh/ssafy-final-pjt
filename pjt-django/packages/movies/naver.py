@@ -24,4 +24,4 @@ def papago(name, fr , to):
         return json.loads(response_query)
 
     else:
-        return
+        return ''

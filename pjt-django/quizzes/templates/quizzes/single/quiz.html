@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Quiz</h1>
+{% for quiz in quiz_list %}
+    <img src="{{base_url}}{{quiz.question}}" alt="">
+{% endfor %}
+{% endblock %}
+ 

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Single INDEX</h1>
+{% for quiz in quiz_list %}
+  <a href="{% url 'quizzes:sin_quiz_index' quiz.quiz_num %}">{{quiz.title}}</a>
+{% endfor %}
+{% endblock %}
+ 
