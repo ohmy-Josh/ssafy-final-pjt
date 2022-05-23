@@ -7,9 +7,10 @@ from packages.movies import youtube, naver
 
 def get_trailers(movies):
     for movie in movies:
-            if movie.trailer_path == '':
-                movie.trailer_path = youtube.youtube_search_trailer(movie.original_title, movie.original_language)
-                movie.save()
+        print(movie)
+        if movie.trailer_path == '':
+            movie.trailer_path = youtube.youtube_search_trailer(movie.original_title, movie.original_language == 'ko')
+            movie.save()
     return
 
 def get_name_kr(names):
@@ -17,8 +18,8 @@ def get_name_kr(names):
         if name.name_kr == '':
             name.name_kr = naver.papago(name.name, 'en', 'ko')['message']['result']['translatedText']
             name.save()
-
     return
+
 
 @require_http_methods(['GET', 'POST'])
 def index(request):

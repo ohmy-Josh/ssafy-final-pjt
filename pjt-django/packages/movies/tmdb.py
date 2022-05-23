@@ -27,7 +27,7 @@ def search_tmdb_movie(movieNm, openDt):
         'api_key' : TMDB_API, 
         'language' : 'ko-KR', 
         'query': movieNm,
-        'yaer': openDt[:4],
+        'year': openDt[:4],
     }
     tmdb_response = requests.get(TMDB_SEARCH_URL, params=tmdb_search_params)
     if tmdb_response.json()['results']:
