@@ -43,6 +43,7 @@ def movie_process(movie, movie_pk):
     model_movie['fields'] = {
             'movie_id': movie['id'],
             'title': movie['title'],
+            'original_title': movie['original_title'],
             'backdrop_path': movie.get('backdrop_path', ''),
             'poster_path':movie.get('poster_path', ''),
             'trailer_path': '', # youtube_search_trailer(movie['original_title'], ko = movie['original_language'] == 'ko'),
@@ -72,7 +73,7 @@ models_dict = {
 movies = tmdb.get_tmdb_top_rated_movie(page = 1)
 
 # 조회할 주간 박스오피스 기간 설정 : (start, end)
-ko_movies = kobis.kobis_boxoffice_traversal('20161101', '20171231')
+ko_movies = kobis.kobis_boxoffice_traversal('20150101', '20161231')
 
 movies += ko_movies 
 

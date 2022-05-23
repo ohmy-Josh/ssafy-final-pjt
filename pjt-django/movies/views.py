@@ -8,7 +8,7 @@ from packages.movies import youtube
 def get_trailers(movies):
     for movie in movies:
             if movie.trailer_path == '':
-                movie.trailer_path = youtube.youtube_search_trailer(movie.title, movie.original_language)
+                movie.trailer_path = youtube.youtube_search_trailer(movie.original_title, movie.original_language)
                 movie.save()
     return
 
@@ -32,7 +32,7 @@ def index(request):
 def detail(request, movie_pk):
     movie = get_object_or_404(Movie, pk = movie_pk)
     
-    actors = movie.actors.all()[:4]
+    actors = movie.actors.all()[:5]
     directors = movie.directors.all()[:2]
     reviews = movie.review_set.all()
 
@@ -43,11 +43,16 @@ def detail(request, movie_pk):
     for director in directors:
         director_movies = director_movies.union(director.movies.all())
 
+    actor_movies = actor_movies.exclude(pk_ = movie_pk)
+    director_movies = director_movies.exclude(pk_ = movie_pk)
+    
     get_trailers(actor_movies)
     get_trailers(director_movies)
 
     context = {
         'movie': movie,
+        'actors': actors,
+        'directors': directors,
         'actor_movies': actor_movies,
         'director_movies': director_movies,
         'reviews': reviews,
