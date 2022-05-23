@@ -38,3 +38,10 @@
   opacity:2;
   transform:scale(1);
 }
+
+.card-title {
+  font-family:'Gugi';
+  color: black;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+

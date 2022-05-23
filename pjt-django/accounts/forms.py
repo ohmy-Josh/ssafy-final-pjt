@@ -4,7 +4,8 @@ from django.contrib.auth import get_user_model
 class CustomUserChangeForm(UserChangeForm):
     class Meta:
         model = get_user_model()
-        fields = '__all__'
+        fields = ('username', 'email', 'first_name', 'last_name', )
+        exclude= ('password',)        
         # 회원 정보 변경시 필드 고려하기
 
 
