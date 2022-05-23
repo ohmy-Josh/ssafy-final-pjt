@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>{{quiz.title}}</h1>
+<p>{{quiz.description}}</p>
+<a href="{% url 'quizzes:sin_quiz_play' quiz.quiz_num%}">문제 풀기</a>
+{% endblock %}
+ 

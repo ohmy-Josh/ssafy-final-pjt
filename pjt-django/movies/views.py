@@ -62,6 +62,8 @@ def detail(request, movie_pk):
         get_name_kr(directors)
     form = ReviewForm()
 
+    form = ReviewForm()
+
     context = {
         'movie': movie,
         'actors': actors,
@@ -69,9 +71,10 @@ def detail(request, movie_pk):
         'actor_movies': actor_movies,
         'director_movies': director_movies,
         'reviews': reviews,
-        'review_form' : form,
+        'review_form': form,
+
     }
-    
+        
     return render(request, 'movies/detail.html', context)
 
 
