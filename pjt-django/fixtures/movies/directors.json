@@ -138,158 +138,104 @@
 		"model": "movies.director",
 		"pk": 16,
 		"fields": {
-			"director_id": 577473,
-			"name": "Lee Kae-byeok",
-			"name_kr": "곽민승"
+			"director_id": 84852,
+			"name": "JK Youn",
+			"name_kr": "윤제균"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 17,
 		"fields": {
-			"director_id": 230360,
-			"name": "Kwon Soo-kyung",
-			"name_kr": "이준"
+			"director_id": 1294527,
+			"name": "Kim Hong-sun",
+			"name_kr": "김홍선"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 18,
 		"fields": {
-			"director_id": 240802,
-			"name": "Park Jung-woo",
-			"name_kr": ""
+			"director_id": 1424872,
+			"name": "Jin Mo-young",
+			"name_kr": "진모영"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 19,
 		"fields": {
-			"director_id": 125426,
-			"name": "Lee Eon-hee",
-			"name_kr": "이언희"
+			"director_id": 1294627,
+			"name": "Yoo Ha",
+			"name_kr": ""
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 20,
 		"fields": {
-			"director_id": 1121891,
-			"name": "Cho Ui-seok",
-			"name_kr": "자레드 헤스"
+			"director_id": 1296088,
+			"name": "Kim Sok-yun",
+			"name_kr": ""
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 21,
 		"fields": {
-			"director_id": 150122,
-			"name": "Hong Ji-young",
-			"name_kr": "홍지영"
+			"director_id": 1456792,
+			"name": "Lee Byeong-heon",
+			"name_kr": ""
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 22,
 		"fields": {
-			"director_id": 1059129,
-			"name": "Han Jae-rim",
-			"name_kr": "잭 브라프"
+			"director_id": 235064,
+			"name": "Baek Woon-Hak",
+			"name_kr": "백운학"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 23,
 		"fields": {
-			"director_id": 1863287,
-			"name": "Kim Sung-hoon",
-			"name_kr": ""
+			"director_id": 84998,
+			"name": "Kwak Kyung-taek",
+			"name_kr": "곽경택"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 24,
 		"fields": {
-			"director_id": 117370,
-			"name": "Bae Jong",
-			"name_kr": "박광현"
+			"director_id": 1475318,
+			"name": "Kim Hak-soon",
+			"name_kr": "김학순"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 25,
 		"fields": {
-			"director_id": 1294930,
-			"name": "Kim Tae-yun",
-			"name_kr": ""
+			"director_id": 119337,
+			"name": "Choi Dong-hoon",
+			"name_kr": "하스미 에이이치로"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 26,
 		"fields": {
-			"director_id": 225240,
-			"name": "Lee Soo-youn",
-			"name_kr": ""
+			"director_id": 86325,
+			"name": "Ryoo Seung-wan",
+			"name_kr": "제임스 밴더빌트"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 27,
-		"fields": {
-			"director_id": 1109635,
-			"name": "Na Hyun",
-			"name_kr": "브라이언 카발라로"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 28,
-		"fields": {
-			"director_id": 1797138,
-			"name": "Kim Hyung-joo",
-			"name_kr": "크리스토퍼 포베스"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 29,
-		"fields": {
-			"director_id": 1294594,
-			"name": "Moon Hyun-sung",
-			"name_kr": ""
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 30,
-		"fields": {
-			"director_id": 573790,
-			"name": "Park In-je",
-			"name_kr": "박인제"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 31,
-		"fields": {
-			"director_id": 1522848,
-			"name": "Lee Chang-jae",
-			"name_kr": "이창재"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 32,
-		"fields": {
-			"director_id": 548646,
-			"name": "Jung Byung-gil",
-			"name_kr": "정병길"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 33,
 		"fields": {
 			"director_id": 126809,
 			"name": "Lee Joon-ik",
@@ -298,137 +244,182 @@
 	},
 	{
 		"model": "movies.director",
+		"pk": 28,
+		"fields": {
+			"director_id": 1879192,
+			"name": "Kim Joung-hoon",
+			"name_kr": "김정훈"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 29,
+		"fields": {
+			"director_id": 1544991,
+			"name": "Jang Jae-hyun",
+			"name_kr": "장재현"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 30,
+		"fields": {
+			"director_id": 1292897,
+			"name": "Woo Min-ho",
+			"name_kr": "우민호"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 31,
+		"fields": {
+			"director_id": 980218,
+			"name": "Lee Suk-hoon",
+			"name_kr": "이석훈"
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 32,
+		"fields": {
+			"director_id": 1565972,
+			"name": "Lee Il-hyung",
+			"name_kr": ""
+		}
+	},
+	{
+		"model": "movies.director",
+		"pk": 33,
+		"fields": {
+			"director_id": 1302905,
+			"name": "Cho Jung-lae",
+			"name_kr": "토요시마 케이스케"
+		}
+	},
+	{
+		"model": "movies.director",
 		"pk": 34,
 		"fields": {
-			"director_id": 1827112,
-			"name": "Cho Sun-ho",
-			"name_kr": "츠네히로 죠타"
+			"director_id": 75915,
+			"name": "Na Hong-jin",
+			"name_kr": ""
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 35,
 		"fields": {
-			"director_id": 86325,
-			"name": "Ryoo Seung-wan",
-			"name_kr": "카와사키  !HS 군 !HE 지"
+			"director_id": 10099,
+			"name": "Park Chan-wook",
+			"name_kr": "박찬욱"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 36,
 		"fields": {
-			"director_id": 148747,
-			"name": "Jang Hoon",
-			"name_kr": "장훈"
+			"director_id": 1135344,
+			"name": "Kim Tae-gon",
+			"name_kr": "김태곤"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 37,
 		"fields": {
-			"director_id": 1410322,
-			"name": "Kim Joo-hwan",
-			"name_kr": "김주환"
+			"director_id": 939147,
+			"name": "Yeon Sang-ho",
+			"name_kr": "연상호"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 38,
 		"fields": {
-			"director_id": 557736,
-			"name": "Park Hoon-jung",
-			"name_kr": ""
+			"director_id": 1023610,
+			"name": "Park Dae-min",
+			"name_kr": "박대민"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 39,
 		"fields": {
-			"director_id": 87894,
-			"name": "Shin-yeon Won",
-			"name_kr": ""
+			"director_id": 78866,
+			"name": "John H. Lee",
+			"name_kr": "이재한"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 40,
 		"fields": {
-			"director_id": 24989,
-			"name": "Kim Hyun-suk",
-			"name_kr": "김현석"
+			"director_id": 1135240,
+			"name": "Kim Seong-hun",
+			"name_kr": "톰 포드"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 41,
 		"fields": {
-			"director_id": 1294471,
-			"name": "Hwang Dong-hyuk",
-			"name_kr": "황동혁"
+			"director_id": 96631,
+			"name": "Hur Jin-ho",
+			"name_kr": "허진호"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 42,
 		"fields": {
-			"director_id": 1902848,
-			"name": "Kang Yun-sung",
-			"name_kr": "강윤성"
+			"director_id": 69081,
+			"name": "Kim Jee-woon",
+			"name_kr": "김지운"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 43,
 		"fields": {
-			"director_id": 240016,
-			"name": "Jang Yoo-jung",
-			"name_kr": "장유정"
+			"director_id": 17119,
+			"name": "Kim Sung-soo",
+			"name_kr": "김성수"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 44,
 		"fields": {
-			"director_id": 1895319,
-			"name": "Jang Chang-won",
-			"name_kr": "장창원"
+			"director_id": 577473,
+			"name": "Lee Kae-byeok",
+			"name_kr": "곽민승"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 45,
 		"fields": {
-			"director_id": 1771406,
-			"name": "Jang Hang-jun",
-			"name_kr": "장항준"
+			"director_id": 230360,
+			"name": "Kwon Soo-kyung",
+			"name_kr": "이준"
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 46,
 		"fields": {
-			"director_id": 1285352,
-			"name": "Yang Woo-seok",
-			"name_kr": "양우석"
+			"director_id": 240802,
+			"name": "Park Jung-woo",
+			"name_kr": ""
 		}
 	},
 	{
 		"model": "movies.director",
 		"pk": 47,
 		"fields": {
-			"director_id": 84969,
-			"name": "Kim Yong-hwa",
-			"name_kr": "김용화"
-		}
-	},
-	{
-		"model": "movies.director",
-		"pk": 48,
-		"fields": {
-			"director_id": 59879,
-			"name": "David Trueba",
-			"name_kr": ""
+			"director_id": 1121891,
+			"name": "Cho Ui-seok",
+			"name_kr": "자레드 헤스"
 		}
 	}
 ]

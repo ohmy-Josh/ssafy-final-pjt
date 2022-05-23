@@ -17,6 +17,7 @@ class Director(models.Model):
 class Movie(models.Model):
     movie_id = models.IntegerField()
     title = models.CharField(max_length=100)
+    original_title = models.CharField(max_length=100)
     backdrop_path = models.CharField(max_length=30)
     poster_path = models.CharField(max_length=30)
     trailer_path =  models.CharField(max_length=30)
