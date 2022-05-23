@@ -19,9 +19,7 @@ def credit_process(key):
             model_tmp['pk'] = pk
             
             name_kr = credit_kr[key].get(person['name'], '')
-            if key == 'directors' and not name_kr and len(credit_kr[key]) == 1:
-                name_kr = list(credit_kr[key].values())[0]
-            
+
             model_tmp['fields'] =  {
                 f'{key[:-1]}_id': person['id'],
                 'name': person['name'],
@@ -85,11 +83,9 @@ for movie in movies:
     credit = tmdb.get_tmdb_movie_credit(movie['id'])
     credit_kr = kmdb.kmdb_credit(movie)
 
-    try:
-        actors = credit_process('actors')
-        directors = credit_process('directors')
-    except:
-        break
+
+    actors = credit_process('actors')
+    directors = credit_process('directors')
 
     models_dict['movies'] += 1
     movie_pk = models_dict['movies']

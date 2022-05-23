@@ -32,4 +32,6 @@ class Movie(models.Model):
 class Review(models.Model):
     user_pk = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     movie_pk = models.ForeignKey(Movie, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     content = models.CharField(max_length=50)

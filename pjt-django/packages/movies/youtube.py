@@ -4,7 +4,6 @@ import requests
 YOUTUBE_URL = 'https://www.googleapis.com/youtube/v3/search'
 YOUTUBE_API = 'AIzaSyAKwE_Pzl_CSP8wStqZYf4unklt9VH1IFc'
 
-
 def youtube_search_trailer(title, ko = True):
     trailer = '예고편' if ko else 'trailer'
     youtube_params = {
@@ -14,6 +13,8 @@ def youtube_search_trailer(title, ko = True):
     }
 
     youtube_response = requests.get(YOUTUBE_URL, params=youtube_params)
-    videoId = youtube_response.json()['items'][0]['id']['videoId']
+    if youtube_response.status_code == 403:
+        return ''
 
-    return  videoId
+    videoId = youtube_response.json()['items'][0]['id']['videoId']
+    return videoId 
