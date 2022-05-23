@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="ms-5">
-  <h1>회원정보수정</h1>
+
+<div class="ms-5 mt-3">
+  <h1 class="mb-3">회원정보수정</h1>
   <form action="" method="POST">
     {% csrf_token %}
-    {{form.as_p}}
-    <button class="btn btn-dark">UPDATE</button>
+    <h4 class="mt-3">Username : </h4>    {{ form.username }}
+    <h4 class="mt-3">Firstname  : </h4>    {{ form.first_name }}
+    <h4 class="mt-3">Lastname  :</h4>     {{ form.last_name }}
+    <h4 class="mt-3">E-mail    : </h4>       {{ form.email}}
+    <br>
+    <a class="btn btn-secondary mt-5" role="button" href="{% url 'accounts:change_password' %}">비밀번호 변경</a>
+    <button class="btn btn-dark mt-5">회원정보 수정하기</button>
   </form>
 </div>
 {% endblock content %}
