@@ -7,7 +7,6 @@ from packages.movies import youtube, naver
 
 def get_trailers(movies):
     for movie in movies:
-        print(movie)
         if movie.trailer_path == '':
             movie.trailer_path = youtube.youtube_search_trailer(movie.original_title, movie.original_language == 'ko')
             movie.save()
