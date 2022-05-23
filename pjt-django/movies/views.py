@@ -60,6 +60,7 @@ def detail(request, movie_pk):
     if movie.original_language == 'ko':
         get_name_kr(actors)
         get_name_kr(directors)
+    form = ReviewForm()
 
     form = ReviewForm()
 
@@ -71,6 +72,7 @@ def detail(request, movie_pk):
         'director_movies': director_movies,
         'reviews': reviews,
         'review_form': form,
+
     }
         
     return render(request, 'movies/detail.html', context)
@@ -84,8 +86,8 @@ def create_review(request, movie_pk):
     form = ReviewForm(request.POST)
     if form.is_valid():
         review = form.save(commit=False)
-        review.movie = movie
-        review.user = request.user
+        review.movie_pk = movie
+        review.user_pk = request.user
         review.save()
     return redirect('movies:detail', movie.pk)
 
