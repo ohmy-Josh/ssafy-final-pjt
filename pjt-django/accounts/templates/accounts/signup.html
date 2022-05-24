@@ -5,7 +5,17 @@
   <h1 class="mb-3">SIGNUP</h1>
   <form action="" method="POST">
     {% csrf_token %}
-    {{form.as_p}}
+    <h4 class="mt-3">Username : 유저 명을 입력해 주세요. 150자 이하 문자, 숫자 그리고 @/./+/-/_만 가능합니다.</h4>    {{ form.username }}
+    <h4 class="mt-3">비밀번호 : 비밀번호를 입력해 주세요.</h4>    {{ form.password1 }}
+    <div class="ms-3 mt-2">
+      <p class="text-danger">!주의</p>
+      <p>다른 개인 정보와 유사한 비밀번호는 사용할 수 없습니다.</p>
+      <p>비밀번호는 최소 8자 이상이어야 합니다.</p>
+      <p>통상적으로 자주 사용되는 비밀번호는 사용할 수 없습니다.</p>
+      <p>숫자로만 이루어진 비밀번호는 사용할 수 없습니다.</p>
+    </div>
+    <h4 class="mt-3">비밀번호 확인 : 비밀번호 확인을 위해 이전과 동일한 비밀번호를 입력하세요. </h4>    {{ form.password2 }}    
+    <br>
     <button class="btn btn-dark mt-5">SIGNUP</button>
   </form>
 </div>
