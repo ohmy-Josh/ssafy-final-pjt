@@ -64,7 +64,6 @@ def update(request):
             return redirect('movies:index')
     else:
         form = CustomUserChangeForm(instance=request.user)
-    
     context = {
         'form' : form,
     }

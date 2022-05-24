@@ -55,3 +55,7 @@
   opacity:2;  
   transform:scale(1);
 }
+
+.email-update {
+  background-color: aqua;
+}

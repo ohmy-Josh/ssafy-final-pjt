@@ -1,4 +1,3 @@
-from logging import PlaceHolder
 from .models import Review
 from django import forms
 

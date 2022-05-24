@@ -52,7 +52,7 @@
               <div class="img-container card bg-dark text-white" style="width: 10rem;">          
                 <img src={{ "https://www.themoviedb.org/t/p/w300_and_h450_bestv2"|add:director_movie.poster_path }} class="card-img img-thumbnail" alt="포스터 이미지">
                 <div class="card-img-overlay d-flex align-items-end justify-content-center">                  
-                  <a class="text-reset card-title fw-bold text-decoration-none fs-4" href="{% url 'movies:detail' movie.pk %}">{{ director_movie.title }}</a>                  
+                  <a class="text-reset card-title fw-bold text-decoration-none fs-4" href="{% url 'movies:detail' director_movie.pk %}">{{ director_movie.title }}</a>                  
                 </div>
               </div>
             </div>
@@ -67,7 +67,7 @@
             <div class="img-container card bg-dark text-white" style="width: 10rem;">          
               <img src={{ "https://www.themoviedb.org/t/p/w300_and_h450_bestv2"|add:actor_movie.poster_path }} class="card-img img-thumbnail" alt="포스터 이미지">
               <div class="card-img-overlay d-flex align-items-end justify-content-center">                  
-                <a class="text-reset card-title fw-bold text-decoration-none fs-4" href="{% url 'movies:detail' movie.pk %}">{{ actor_movie.title }}</a>                  
+                <a class="text-reset card-title fw-bold text-decoration-none fs-4" href="{% url 'movies:detail' actor_movie.pk %}">{{ actor_movie.title }}</a>                  
               </div>
             </div>
           </div>
@@ -108,5 +108,8 @@
     </div>
   </div>
 </div>
+<a style="position:fixed; bottom:40px; right:30px; z-index: 30;" href="{% url 'quizzes:index'%}" >
+  <img src="https://kcoupet.com/assets/img/sideMenu/index_hambg_icon12.png" alt="퀴즈 이미지" style="width: 150px;">
+</a>
 
 {% endblock %}
