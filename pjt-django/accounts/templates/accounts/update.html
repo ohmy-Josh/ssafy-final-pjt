@@ -5,14 +5,38 @@
 <div class="ms-5 mt-3">
   <h1 class="mb-3">회원정보수정</h1>
   <form action="" method="POST">
-    {% csrf_token %}
-    <h4 class="mt-3">Username : </h4>    {{ form.username }}
-    <h4 class="mt-3">Firstname  : </h4>    {{ form.first_name }}
-    <h4 class="mt-3">Lastname  :</h4>     {{ form.last_name }}
-    <h4 class="mt-3">E-mail    : </h4>       {{ form.email}}
+    {% csrf_token %}    
+      <div class="col-md-2">
+        <label for="validationCustom01" class="form-label">First name</label>
+        {{ form.first_name }}
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-2">
+        <label for="validationCustom02" class="form-label">Last name</label>
+        {{ form.last_name }}
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-2">
+        <label for="validationCustomUsername" class="form-label">Username</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+          {{ form.username }}
+          <div class="invalid-feedback">
+            Please choose a username.
+          </div>     
+        </div>
+      </div>
+      <div class="mb-3 col-md-4">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+          {{ form.email}}
+      </div>             
     <br>
     <a class="btn btn-secondary mt-5" role="button" href="{% url 'accounts:change_password' %}">비밀번호 변경</a>
     <button class="btn btn-dark mt-5">회원정보 수정하기</button>
-  </form>
+    </form>
 </div>
 {% endblock content %}
