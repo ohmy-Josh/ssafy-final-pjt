@@ -86,8 +86,8 @@ def create_review(request, movie_pk):
     form = ReviewForm(request.POST)
     if form.is_valid():
         review = form.save(commit=False)
-        review.movie_pk = movie
-        review.user_pk = request.user
+        review.movie = movie
+        review.user = request.user
         review.save()
     return redirect('movies:detail', movie.pk)
 

@@ -10,11 +10,11 @@
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <div class="container-xxl p-3" style="background-color: #c0c0c0;">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-5">
       <img src={{ "https://www.themoviedb.org/t/p/w300_and_h450_bestv2"|add:movie.poster_path }} class="card-img img-thumbnail" alt="..." style="width: 30rem;">
     </div>
-    <div class="col-sm-8">      
-      <h2 class="mt-4 mb-4">{{ movie.title }}</h2>
+    <div class="col-sm-7">      
+      <h2 class=" mb-4">{{ movie.title }}</h2>
       <div class="ms-3 me-5">
         <p>개봉 : {{ movie.release_date}}</p>
         <p>TMDB 평점 : {{ movie.vote_average }}</p> 
@@ -30,7 +30,13 @@
           {% endfor %} 
         </p>
         <p class="fw-bold">줄거리</p>    
-        <p>{{ movie.overview }}</p>      
+        <p>{{ movie.overview }}</p>
+        <div>
+          <p class="mb-3 fw-bold">예고편</p>   
+          <div class="ratio ratio-16x9 " style="width: 400px;">          
+            <iframe class="ratio "  width="560" height="315" src={{"https://www.youtube.com/embed/"|add:movie.trailer_path }} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>   
+        </div>
       </div>
     </div>
   </div>
@@ -45,8 +51,8 @@
             <div class="main-container col mb-4">
               <div class="img-container card bg-dark text-white" style="width: 10rem;">          
                 <img src={{ "https://www.themoviedb.org/t/p/w300_and_h450_bestv2"|add:director_movie.poster_path }} class="card-img img-thumbnail" alt="포스터 이미지">
-                <div class="card-img-overlay d-flex align-items-end justify-content-center">
-                  <h5 class="text-reset card-title fw-bold text-decoration-none">{{ director_movie.title }}</h5>                     
+                <div class="card-img-overlay d-flex align-items-end justify-content-center">                  
+                  <a class="text-reset card-title fw-bold text-decoration-none fs-4" href="{% url 'movies:detail' movie.pk %}">{{ director_movie.title }}</a>                  
                 </div>
               </div>
             </div>
@@ -60,8 +66,8 @@
           <div class="main-container col mb-3 me-4">
             <div class="img-container card bg-dark text-white" style="width: 10rem;">          
               <img src={{ "https://www.themoviedb.org/t/p/w300_and_h450_bestv2"|add:actor_movie.poster_path }} class="card-img img-thumbnail" alt="포스터 이미지">
-              <div class="card-img-overlay d-flex align-items-end justify-content-center">
-                <h5 class="text-reset card-title fw-bold text-decoration-none">{{  actor_movie.title }}</h5>                     
+              <div class="card-img-overlay d-flex align-items-end justify-content-center">                  
+                <a class="text-reset card-title fw-bold text-decoration-none fs-4" href="{% url 'movies:detail' movie.pk %}">{{ actor_movie.title }}</a>                  
               </div>
             </div>
           </div>
@@ -94,7 +100,7 @@
     <div class="review_list mb-5">
       {% for review in reviews %}
         <div>
-          {{ review.user }} - {{ review.content }}
+          작성자: {{ review.user }} - 댓글: {{ review.content }}
         </div>
       {% empty %}
         <p><b>댓글이 없어요..</b></p>
