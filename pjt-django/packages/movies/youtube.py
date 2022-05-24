@@ -5,7 +5,7 @@ YOUTUBE_URL = 'https://www.googleapis.com/youtube/v3/search'
 YOUTUBE_API = 'AIzaSyAKwE_Pzl_CSP8wStqZYf4unklt9VH1IFc'
 
 def youtube_search_trailer(title, ko = True):
-    trailer = '예고편' if ko else 'trailer'
+    trailer = ' 예고편' if ko else ' trailer'
     youtube_params = {
         'key' : YOUTUBE_API, 
         'part' : 'snippet', 

@@ -9,7 +9,9 @@ django.setup()
 
 from movies.models import Movie, Actor, Director
 
-movies = Movie.objects.filter(original_language = 'ko')
-movies = movies.order_by('?')
-answers = movies[:1]
-print(answers)
+import json
+
+movie = Movie.objects.filter(title = '김씨 표류기')
+
+with open(f'fixtures/movies/tmp.json', 'w', encoding="utf-8") as make_file:
+        json.dump(movie, make_file, ensure_ascii=False, indent="\t")
