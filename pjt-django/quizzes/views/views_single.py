@@ -2,7 +2,6 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views.decorators.http import require_http_methods, require_GET, require_POST
 
 from movies.models import Movie, Actor, Director, Review
-from packages.movies import youtube, naver
 from ..models import Quiz, QuizPlay
 import random
 
@@ -91,7 +90,7 @@ def quiz_play(request, quiz_pk, quiz_num):
                 'quiz_pk': quiz_pk,
                 'current': quiz_num,
         }
-    page = f'quizzes/single/quiz{quiz_num}.html'
+    page = f'quizzes/single/quiz{quiz_pk}.html'
     return render(request, page, context)
 
 
