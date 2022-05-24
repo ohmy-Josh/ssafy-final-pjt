@@ -2,9 +2,13 @@
 {% load static %}
 
 {% block content %}
-<h1>Single INDEX</h1>
-{% for quiz in quizzes %}
-  <a href="{% url 'quizzes:sin_quiz_index' quiz.pk %}">{{quiz.title}}</a>
-{% endfor %}
+
+<div class="ms-3 my-3">
+  <h1 class="mb-5">Single INDEX</h1>
+  {% for quiz in quizzes %}
+  <a href="{% url 'quizzes:sin_quiz_index' quiz.pk %}" class="text-decoration-none">{{quiz.title}}</a>
+  {% endfor %}
+</div>
+
 {% endblock %}
  

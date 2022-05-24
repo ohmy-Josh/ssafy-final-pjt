@@ -2,29 +2,35 @@
 {% load static %}
 
 {% block content %}
-<h1>Quiz Result</h1>
-<div>
-  <h3>정답</h3>
-  {% for correct in corrects %}
-    <p>
-      {{correct.title}}
-    </p>
-  {% endfor %}
+<div class="ms-3 my-3">
+  <h1>Quiz Result</h1>
+  <div>
+    <h3>정답</h3>
+    <ul class="list-group list-group-flush" style="max-width: 400px;">
+      {% for correct in corrects %}
+        <li class="list-group-item">
+          {{correct.title}}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  
+  <div>
+    <h3>오답</h3>
+    <ul class="list-group list-group-flush" style="max-width: 400px;">
+      {% for incorrect in incorrects %}
+        <li class="list-group-item">
+          {{incorrect.title}}
+        </li> 
+      {% endfor %}            
+    </ul>
+  </div>  
+  <form action="{% url 'quizzes:sin_quiz_play' quiz.pk 0%}" method="POST">
+    {% csrf_token %}
+    <button class="btn btn-info">다시 풀기</button>
+    <a href="#" class="btn btn-secondary">뒤로</a>
+  </form>
 </div>
-
-<div>
-  <h3>오답</h3>
-  {% for incorrect in incorrects %}
-    <p>
-      {{incorrect.title}}
-    </p>
-  {% endfor %}
-</div>
-
-<form action="{% url 'quizzes:sin_quiz_play' quiz.pk 0%}" method="POST">
-  {% csrf_token %}
-  <button>다시 풀기</button>
-</form>
 
 
 
