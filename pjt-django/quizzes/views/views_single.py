@@ -91,7 +91,7 @@ def quiz_play(request, quiz_pk, quiz_num):
                 'quiz_pk': quiz_pk,
                 'current': quiz_num,
         }
-    page = f'quizzes/single/quiz{quiz_num}.html'
+    page = f'quizzes/single/quiz{quiz_pk}.html'
     return render(request, page, context)
 
 
