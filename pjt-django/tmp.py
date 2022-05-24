@@ -10,8 +10,6 @@ django.setup()
 from movies.models import Movie, Actor, Director
 
 movies = Movie.objects.filter(original_language = 'ko')
-movies = movies.order_by('?')[:5]
-
-movie = Movie.objects.get(pk = 1)
-
-print(movies.values_list('title')[0])
+movies = movies.order_by('?')
+answers = movies[:1]
+print(answers)

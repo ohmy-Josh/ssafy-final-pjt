@@ -9,8 +9,12 @@ class Quiz(models.Model):
     question = models.CharField(max_length=100)
     answer = models.CharField(max_length=100)
 
+
 class QuizPlay(models.Model):
     quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    answer_list = models.ManyToManyField(Movie)
+    answer_list = models.ManyToManyField(Movie, related_name='answers')
+    choice_list = models.ManyToManyField(Movie, related_name='choices')
     current = models.IntegerField()
+    result_list = models.JSONField()
+    
