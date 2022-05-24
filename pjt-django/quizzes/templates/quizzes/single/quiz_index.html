@@ -4,6 +4,11 @@
 {% block content %}
 <h1>{{quiz.title}}</h1>
 <p>{{quiz.description}}</p>
-<a href="{% url 'quizzes:sin_quiz_play' quiz.quiz_num%}">문제 풀기</a>
+<form action="{% url 'quizzes:sin_quiz_play' quiz.pk 0%}" method="POST">
+  {% csrf_token %}
+  <button>문제 풀기</button>
+</form>
+<a href="{% url 'quizzes:sin_index'%}">뒤로 가기</a>
+
 {% endblock %}
  
