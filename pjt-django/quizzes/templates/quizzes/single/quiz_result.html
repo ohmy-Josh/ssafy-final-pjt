@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Quiz Result</h1>
+<div>
+  <h3>정답</h3>
+  {% for correct in corrects %}
+    <p>
+      {{correct.title}}
+    </p>
+  {% endfor %}
+</div>
+
+<div>
+  <h3>오답</h3>
+  {% for incorrect in incorrects %}
+    <p>
+      {{incorrect.title}}
+    </p>
+  {% endfor %}
+</div>
+
+<form action="{% url 'quizzes:sin_quiz_play' quiz.pk 0%}" method="POST">
+  {% csrf_token %}
+  <button>다시 풀기</button>
+</form>
+
+
+
+{% endblock content%}

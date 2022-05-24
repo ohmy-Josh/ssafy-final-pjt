@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Quiz  {{current}} </h1>
+<div class="d-flex">
+  <img src="{{base_url}}{{quiz_current.question}}" alt="">
+  <div class="d-flex column">
+    <form action="" method="POST">
+      {% csrf_token %}
+      {% for choice in quiz_current.choices %}
+      <label><input type="radio" name="result" value="{{choice.0}}">{{choice.0}}</label>
+      {% endfor %}
+      <button>다음 문제</button>
+    </form>
+  </div>
+</div>
+{% endblock content%}
