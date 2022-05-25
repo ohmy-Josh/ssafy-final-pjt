@@ -1,9 +1,10 @@
 import requests
+from . import API_keys as api
 
 # TMDB API 
 TMDB_TOP_URL = 'https://api.themoviedb.org/3/movie/top_rated'
 TMDB_SEARCH_URL = 'https://api.themoviedb.org/3/search/movie'
-TMDB_API = '05331f044ea25f9c5d63cda187d08a2a'
+TMDB_API = api.TMDB_API
 
 # TMDB movie top_rated
 def get_tmdb_top_rated_movie(page = 1):

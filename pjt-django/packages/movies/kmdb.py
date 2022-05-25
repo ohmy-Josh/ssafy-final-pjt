@@ -1,10 +1,19 @@
 import requests
+from . import API_keys as api
 
 # KMDB API 
 KMDB_URL = 'http://api.koreafilm.or.kr/openapi-data2/wisenut/search_api/search_json2.jsp?'
-KMDB_API = 'UM30MB478HW333CC5LPR'
+KMDB_API = api.KMDB_API
 
-
+def delete_tags(name):
+    if '!' in name:
+        tokens = name.split()
+        tokens = [token for token in tokens if '!' not in token]
+        result = ' '.join(tokens)
+        return result
+    else:
+        return name
+        
 # KMDB credit
 def kmdb_credit(movie):
     credit_kr = {
@@ -31,8 +40,8 @@ def kmdb_credit(movie):
     actors_kr = kmdb_response.json()['Data'][0]['Result'][0]['actors']['actor']
     directors_kr = kmdb_response.json()['Data'][0]['Result'][0]['directors']['director']
 
-    actors_kr = dict((actor['actorEnNm'], actor['actorNm']) for actor in actors_kr if actor.get('actorEnNm', ''))
-    directors_kr = dict((director['directorEnNm'] if director['directorEnNm'] else idx, director['directorNm']) for idx, director in enumerate(directors_kr))
+    actors_kr = dict((actor['actorEnNm'], delete_tags(actor['actorNm'])) for actor in actors_kr if actor.get('actorEnNm', ''))
+    directors_kr = dict((director['directorEnNm'], delete_tags(director['directorNm'])) for director in directors_kr if director.get('directorEnNm', ''))
 
     credit_kr = {
         'actors': actors_kr,
@@ -40,4 +49,3 @@ def kmdb_credit(movie):
     }
 
     return credit_kr
-
