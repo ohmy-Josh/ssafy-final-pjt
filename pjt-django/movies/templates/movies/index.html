@@ -20,8 +20,8 @@
 
 
 <body> 
-  <div class="text-center mb-5">    
-    <img class="ratio border " src="https://img.freepik.com/free-vector/trendy-movie-time-concept-layout-with-film-projector-and-text-area-withlettring-quote-it-s-movie-time-cool-cinema-poster-leaflet-or-banner-template-with-detailed-retro-projector-with-film-reels_119217-1510.jpg?w=1380" alt="메인 페이지 이미지">
+  <div class="text-center mb-5 mt-3">    
+    <img class="ratio mt-5" src="{% static 'logo-img/main-logo.png' %}" alt="메인 페이지 이미지" style="width: 95%;">
   </div>  
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 ms-4">      
       {% for movie in movies  %}  
@@ -54,7 +54,7 @@
           <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header bg-black text-white ">
-                <h5 class="modal-title fs-3" id="exampleModalLabel">{{ movie.title }}</h5>
+                <h5 class="modal-title fs-3" id="exampleModalLabel fw-bold">{{ movie.title }}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body bg-black text-white">              
@@ -71,8 +71,8 @@
         </div>     
       {% endfor %}
     </div>
-    <a style="position:fixed; bottom:40px; right:30px; z-index: 30;" href="{% url 'quizzes:index'%}" >
-      <img src="https://kcoupet.com/assets/img/sideMenu/index_hambg_icon12.png" alt="퀴즈 이미지" style="width: 150px;">
+    <a style="position:fixed; bottom:30px; right:30px; z-index: 30;" href="{% url 'quizzes:index'%}" class="bg-warning rounded-circle" >
+      <img src="https://kcoupet.com/assets/img/sideMenu/index_hambg_icon12.png" alt="퀴즈 이미지" style="width: 110px;">
     </a>
   </body>
 {% endblock %}
