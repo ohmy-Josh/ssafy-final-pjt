@@ -1,3 +1,4 @@
+from operator import length_hint
 import random
 
 from django.shortcuts import render, redirect
@@ -110,16 +111,18 @@ def quiz_play_result(request, quiz_pk):
     results = quiz_play.result_list
     answers = quiz_play.answer_list.all()[::]
     corrects, incorrects = [], []
+    
     for result, movie in zip(results, answers):
         if result:
             corrects.append(movie)
         else:
             incorrects.append(movie)
-
+    score = len(corrects)*10
     context = {
         'corrects': corrects,
         'incorrects': incorrects,
         'quiz': quiz,
+        'score': score,
     }
 
     return render(request, 'quizzes/single/quiz_result.html', context)

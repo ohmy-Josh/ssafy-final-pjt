@@ -17,21 +17,23 @@
     
     <nav class="navbar navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'movies:index'%}"><img src="{% static 'logo-img/main-logo.png' %}" class="card-img-top" alt="nav-logo" height="40"></a>
+        <a class="navbar-brand" href="{% url 'movies:index'%}">
+          <img src="{% static 'logo-img/main-logo.png' %}" class="card-img-top" alt="nav-logo" height="40">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">          
-          <div class="offcanvas-header flex-column">
+          <div class="offcanvas-header flex-column bg-black bg-opacity-75 text-white">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             {% if user.is_authenticated %}          
             <h5 class="offcanvas-title fs-1 mt-5" id="offcanvasNavbarLabel">Hello, {{ user.username }}</h5>
             {% else %}      
             <h6 class="offcanvas-title fs-1 mt-5" id="offcanvasNavbarLabel">Please, Login</h6>      
             {% endif %}
-          </div>
-          <div class="offcanvas-body ">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          </div>          
+          <div class="offcanvas-body bg-warning bg-opacity-25 ">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
               {% if user.is_authenticated %}  
               <li class="nav-item">
                 <form action="{% url 'accounts:update' %}" method="GET">
@@ -44,35 +46,22 @@
                 <input class="bg-transparent text-dark border-0 text-start"type="submit" value="Logout">
               </form>
               <hr>
-              {% else %}
-              <li class="nav-item">
+              {% else %} 
+              <li class="nav-item nav-item mb-3">
                 <a class="nav-link active text-dark text-decoration-none" aria-current="page" href="{% url 'accounts:signup' %}" style="margin-left: 5px;">Sign Up</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item nav-item ">
                 <a class="nav-link active text-dark text-decoration-none" aria-current="page" href="{% url 'accounts:login' %}" style="margin-left: 5px;">Login</a>
               </li>
               <hr>
               {% endif %}             
-              <li class="nav-item">
+              <li class="nav-item mb-3">
                 <a class="nav-link active text-dark" aria-current="page" href="{% url 'movies:index'%}" style="margin-left: 5px;">Home</a>
-              </li>             
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-dark" href="{% url 'quizzes:index'%}" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left: 5px;">
-                  Quiz
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                  <li><a class="dropdown-item" href="{% url 'quizzes:sin_index'%}">Single Mode</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#">Recreation Mode</a></li>                  
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+              </li>        
+              <li class="nav-item ">
+                <a class="nav-link active text-dark" aria-current="page" href="{% url 'quizzes:index'%}" style="margin-left: 5px;">Quiz</a>
+              </li>                    
+            </ul>            
           </div>
         </div>
       </div>

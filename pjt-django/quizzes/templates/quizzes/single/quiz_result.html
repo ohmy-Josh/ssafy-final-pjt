@@ -2,36 +2,72 @@
 {% load static %}
 
 {% block content %}
-<div class="ms-5"style="margin: 100px auto;">
-  <h1>Quiz Result</h1>
-  <div>
-    <h3>정답</h3>
-    <ul class="list-group list-group-flush" style="max-width: 400px;">
-      {% for correct in corrects %}
-        <li class="list-group-item">
-          {{correct.title}}
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-  
-  <div>
-    <h3>오답</h3>
-    <ul class="list-group list-group-flush" style="max-width: 400px;">
-      {% for incorrect in incorrects %}
-        <li class="list-group-item">
-          {{incorrect.title}}
-        </li> 
-      {% endfor %}            
-    </ul>
-  </div>  
-  <form action="{% url 'quizzes:sin_quiz_play' quiz.pk 0%}" method="POST">
-    {% csrf_token %}
-    <button class="btn btn-info mt-3">다시 풀기</button>
-    <a href="{% url 'quizzes:sin_index'%}" class="btn btn-secondary mt-3">뒤로</a>
-  </form>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% comment %} 모달이 닫힐때 영상이 멈추도록 구성 {% endcomment %}
+<script>
+  $(function(){
+    $('.modal').on('hidden.bs.modal', function (e) {
+      $iframe = $(this).find("iframe");
+      $iframe.attr("src", $iframe.attr("src"));
+    });
+  });
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<div class="container">
+  <div class="ms-5 row"style="margin: 70px auto;">
+  </div >  
+    <h1 class="mb-3 text-center fs-1">Quiz Result</h1>
+    <p class="fs-3 text-center">
+      '{{ score }}'점입니다!!         
+      <form action="{% url 'quizzes:sin_quiz_play' quiz.pk 0%}" method="POST" class="d-flex justify-content-center">
+        {% csrf_token %}
+        <a href="{% url 'quizzes:sin_index'%}" class="btn btn-secondary">돌아가기</a>
+        <button class="btn btn-warning ms-3">다시 풀기</button>
+      </form>
+    </p>        
 </div>
-
+<h3 class="mx-5 bg-danger bg-opacity-50 p-3 rounded"> 오답!! </h3>
+<div class="row row-cols-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 mx-5">        
+  {% for incorrect in incorrects  %}  
+    <div class="main-container col  mt-3 mb-4">
+      <div class="img-container card bg-dark text-white" style="width: 13rem;">    
+        <img src={{ "https://www.themoviedb.org/t/p/w300_and_h450_bestv2"|add:incorrect.poster_path }} class="card-img img-thumbnail" alt="포스터 이미지">
+        <div class="card-img-overlay d-flex align-items-end justify-content-center">  
+          <a 
+            class="text-reset card-title fw-bold text-decoration-none fs-4" 
+            href="{% url 'movies:detail' incorrect.pk %}"
+            data-toggle="tooltip" 
+            data-placement="top" 
+            title="자세히 보기"
+            >
+              {{ incorrect.title }}
+          </a>
+        </div>
+      </div>          
+    </div>        
+  {% endfor %}
+</div>
+<h3 class="mx-5 bg-success bg-opacity-50 p-3 rounded"> 정답!! </h3>
+<div class="row row-cols-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 mx-5">        
+  {% for correct in corrects  %}  
+    <div class="main-container col  mt-3 mb-4">
+      <div class="img-container card bg-dark text-white" style="width: 13rem;">    
+        <img src={{ "https://www.themoviedb.org/t/p/w300_and_h450_bestv2"|add:correct.poster_path }} class="card-img img-thumbnail" alt="포스터 이미지">
+        <div class="card-img-overlay d-flex align-items-end justify-content-center">  
+          <a 
+            class="text-reset card-title fw-bold text-decoration-none fs-4" 
+            href="{% url 'movies:detail' correct.pk %}"
+            data-toggle="tooltip" 
+            data-placement="top" 
+            title="자세히 보기"
+            >
+              {{ correct.title }}
+          </a>
+        </div>
+      </div>          
+    </div>        
+  {% endfor %}
+</div>
 
 
 {% endblock content%}
