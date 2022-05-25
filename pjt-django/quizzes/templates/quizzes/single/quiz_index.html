@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div class="ms-3 my-3">
+<div class="ms-5" style="margin: 100px auto;">
   <h1>{{quiz.title}}</h1>
   <p class="fs-4">{{quiz.description}}</p>
   <form action="{% url 'quizzes:sin_quiz_play' quiz.pk 0%}" method="POST">

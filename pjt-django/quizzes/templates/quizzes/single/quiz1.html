@@ -2,27 +2,29 @@
 {% load static %}
 
 {% block content %}
-<div class="ms-3 my-3">
-  <h1>Quiz  {{current}} </h1>
-  <div class="card mb-3" style="max-width: 1300px;">
-    <div class="row g-0">
+<div class="d-flex flex-column align-items-center" style="margin: 100px auto;">
+  <h1 class="mb-3">Quiz  {{current}} </h1>
+  <div class="card" style="height:70%">
+    <div class="row">
       <div class="col-md-4">
         <img src="{{base_url}}{{quiz_current.question}}" class="img-fluid rounded-start" alt="...">
       </div>
       <div class="col-md-8">
         <div class="card-body">
           <ul class="list-group list-group-flush">
-              <li class="list-group-item">
+              <li class="list-group-item fw-bold border border-warning p-3">
                 정답은?? 
               </li>
             <form action="" method="POST">
               {% csrf_token %}
               {% for choice in quiz_current.choices %}
-              <li class="list-group-item ">
+              <li class="list-group-item my-1">
                 <label><input type="radio" name="result" value="{{choice.0}}">{{choice.0}}</label>
               </li>
               {% endfor %}
-              <button class="btn btn-success mt-3">다음 문제</button>
+              <div class="d-flex justify-content-end">
+                <button class="btn btn-success mt-3 ">다음 문제</button>
+              </div>
           </ul>
         </div>
       </div>
