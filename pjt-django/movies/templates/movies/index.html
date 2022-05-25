@@ -17,7 +17,9 @@
   });
 </script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-<body style="background-color: 	white"> 
+
+
+<body> 
   <div class="text-center mb-5">    
     <img class="ratio border " src="https://img.freepik.com/free-vector/trendy-movie-time-concept-layout-with-film-projector-and-text-area-withlettring-quote-it-s-movie-time-cool-cinema-poster-leaflet-or-banner-template-with-detailed-retro-projector-with-film-reels_119217-1510.jpg?w=1380" alt="메인 페이지 이미지">
   </div>  
@@ -45,11 +47,10 @@
                   {{ movie.title }}
               </a>
             </div>
-          </div>
-          
+          </div>          
         </div>    
       {% comment %} Modal {% endcomment %}
-        <div class="modal fade bg-dark" id="exampleModal{{movie.pk}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade bg-dark bg-opacity-75" id="exampleModal{{movie.pk}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header bg-black text-white ">

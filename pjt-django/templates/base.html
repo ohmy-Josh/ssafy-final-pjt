@@ -1,13 +1,12 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.js"></script>
-    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">    
+    <link type="text/css" rel="stylesheet" href="https//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext"  >
     <title>Movies</title>
     {% block style %}
     {% endblock %}
@@ -16,9 +15,9 @@
 
     <!-- Example Code -->
     
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand text-white fs-2" href="{% url 'movies:index'%}">Movies</a>
+        <a class="navbar-brand" href="{% url 'movies:index'%}"><img src="{% static 'logo-img/main-logo.png' %}" class="card-img-top" alt="nav-logo" height="40"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,9 +25,9 @@
           <div class="offcanvas-header flex-column">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             {% if user.is_authenticated %}          
-            <h5 class="offcanvas-title fs-1 mt-1" id="offcanvasNavbarLabel">Hello, {{ user.username }}</h5>
+            <h5 class="offcanvas-title fs-1 mt-5" id="offcanvasNavbarLabel">Hello, {{ user.username }}</h5>
             {% else %}      
-            <h6 class="offcanvas-title fs-1 mt-1" id="offcanvasNavbarLabel">Please, Login</h6>      
+            <h6 class="offcanvas-title fs-1 mt-5" id="offcanvasNavbarLabel">Please, Login</h6>      
             {% endif %}
           </div>
           <div class="offcanvas-body ">
@@ -62,7 +61,7 @@
                   Quizzes
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                  <li><a class="dropdown-item" href="#">SingleMode</a></li>
+                  <li><a class="dropdown-item" href="{% url 'quizzes:sin_index'%}">SingleMode</a></li>
                   <li>
                     <hr class="dropdown-divider">
                   </li>
@@ -82,10 +81,13 @@
  
     {% block content %}
     {% endblock content %}
+    <script src="https//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+    <script src="https//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.js"></script>
+    <script src="https//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    
     {% block script %}
     {% endblock script %}
   </body>
