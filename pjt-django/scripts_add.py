@@ -4,21 +4,25 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "final_pjt.settings")
 import django
 django.setup()
 
-from packages.movies import tmdb, kobis, kmdb
+from packages.movies import tmdb, kmdb
 from movies.models import Movie, Actor, Director
 
 # 조회할 top_rate page 설정 
 movies = tmdb.get_tmdb_top_rated_movie(page = 30)
 
 # 조회할 주간 박스오피스 기간 설정 : (start, end)
-# ko_movies = kobis.kobis_boxoffice_traversal('20031101', '20061231')
 # 2003 ~ 2022 반영
+# ko_movies = kobis.kobis_boxoffice_traversal('20210101', '20220520')
 # movies += ko_movies
  
 nums = len(movies)
 print(f'{nums}편 영화 목록 추출 완료')
 num = 0
 for movie in movies:
+    
+    if not movie['overview']:
+        continue
+
     num += 1
     new_movie, created = Movie.objects.get_or_create(
         movie_id = movie['id'],
@@ -36,9 +40,6 @@ for movie in movies:
     if not created:
         continue
 
-    if not movie['overview']:
-        continue
-    
     credit = tmdb.get_tmdb_movie_credit(movie['id'])
     credit_kr = kmdb.kmdb_credit(movie)
 

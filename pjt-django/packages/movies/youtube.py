@@ -1,8 +1,9 @@
 import requests
+from . import API_keys as api
 
 # YOUTUBE API ('https://www.youtube.com/embed/' + video_id)
 YOUTUBE_URL = 'https://www.googleapis.com/youtube/v3/search'
-YOUTUBE_API = 'AIzaSyAKwE_Pzl_CSP8wStqZYf4unklt9VH1IFc'
+YOUTUBE_API = api.YOUTUBE_API
 
 def youtube_search_trailer(title, ko = True):
     trailer = ' 예고편' if ko else ' trailer'

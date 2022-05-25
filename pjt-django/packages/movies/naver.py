@@ -1,12 +1,10 @@
 import urllib.request
 import json
+from . import API_keys as api
 
 # NAVER API
 NAVER_MOVIE_URL = 'https://openapi.naver.com/v1/search/movie.json'
-NAVER_HEADERS = {
-    'X-Naver-Client-Id': 'oaTKpVAjfWHNCp4akRpt',
-    'X-Naver-Client-Secret': '5jKnOLvr7V',
-}
+NAVER_HEADERS = api.NAVER_HEADERS
 
 def papago(name, fr , to):
     encText = urllib.parse.quote(name)

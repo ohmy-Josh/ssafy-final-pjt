@@ -1,9 +1,11 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from django.views.decorators.http import require_http_methods, require_GET, require_POST
-
-from movies.models import Movie, Actor, Director, Review
-from ..models import Quiz, QuizPlay
 import random
+
+from django.shortcuts import render, redirect
+from django.views.decorators.http import require_http_methods, require_GET
+from django.contrib.auth.decorators import login_required
+
+from movies.models import Movie
+from ..models import Quiz, QuizPlay
 
 @require_http_methods(['GET'])
 def index(request):
@@ -22,6 +24,7 @@ def quiz_index(request, quiz_pk):
     return render(request, 'quizzes/single/quiz_index.html', context)
 
 
+@login_required
 @require_http_methods(['POST', 'GET'])
 def quiz_play(request, quiz_pk, quiz_num):
     quiz = Quiz.objects.get(pk = quiz_pk)
@@ -94,6 +97,7 @@ def quiz_play(request, quiz_pk, quiz_num):
     return render(request, page, context)
 
 
+@login_required
 @require_GET
 def quiz_play_result(request, quiz_pk):
     quiz = Quiz.objects.get(pk = quiz_pk)

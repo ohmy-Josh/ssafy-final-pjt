@@ -1,11 +1,11 @@
 import requests
 from datetime import datetime, timedelta 
 from . import tmdb
+from . import API_keys as api
 
 # KOBIS API
 KOBIS_URL = 'https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json'
-KOBIS_API = '98217f55c5f31d1fc019c4a3c2ebe0a6'
-
+KOBIS_API = api.KOBIS_API
 
 def kobis_get_weekly_boxoffice(date):
     kobis_params = {
