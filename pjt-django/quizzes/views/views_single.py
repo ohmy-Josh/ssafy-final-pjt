@@ -19,8 +19,10 @@ def index(request):
 
 def quiz_index(request, quiz_pk):
     quiz = Quiz.objects.get(pk = quiz_pk)
+    example = ''
     context = {
         'quiz': quiz,
+        'example': example, 
     }
     return render(request, 'quizzes/single/quiz_index.html', context)
 

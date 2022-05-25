@@ -1,3 +1,4 @@
+from platform import release
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.decorators.http import require_http_methods, require_GET, require_POST
 
@@ -26,7 +27,7 @@ def index(request):
         # 관리자만 접근 가능 + 새로운 영화 목록 추가
         return
     else:
-        movies = Movie.objects.filter(pk__lte = 12)     # 반환할 movie list 수정 필요
+        movies = Movie.objects.order_by('-release_date')[:10]    # 반환할 movie list 수정 필요
         get_trailers(movies)
 
     context = {
