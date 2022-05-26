@@ -20,7 +20,7 @@ def index(request):
 
 def quiz_index(request, quiz_pk):
     quiz = Quiz.objects.get(pk = quiz_pk)
-    example = ''
+    example = f'quiz-example/quiz{quiz_pk}_ex.jpg'
     context = {
         'quiz': quiz,
         'example': example, 
