@@ -1,77 +1,75 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block style %}
 {% endblock  %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'css/style.css' %}">
-<script src="script.js"></script>
-
 <body> 
-  {% comment %} 모달이 닫힐때 영상이 멈추도록 구성 {% endcomment %}
-  <script>
-    $(function(){
-      $('.modal').on('hidden.bs.modal', function (e) {
-        $iframe = $(this).find("iframe");
-        $iframe.attr("src", $iframe.attr("src"));
-      });
-    });
-  </script>
   <div class="text-center mb-5 mt-3">    
     <img class="ratio mt-5" src="{% static 'logo-img/main-logo.png' %}" alt="메인 페이지 이미지" style="width: 95%;">
   </div>  
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 ms-4">      
-    {% for movie in movies  %}  
-    <div class="main-container col mb-4">
+      {% for movie in movies  %}  
+        <div class="main-container col mb-4">
           <div class="img-container card bg-dark text-white" style="width: 17rem;">    
             <img src={{ "https://www.themoviedb.org/t/p/w300_and_h450_bestv2"|add:movie.poster_path }} class="card-img img-thumbnail" alt="포스터 이미지">
             <div class="card-img-overlay d-flex align-items-end justify-content-center">              
               <button class="play-btn video-btn" data-bs-toggle="modal" data-bs-target="#exampleModal{{movie.pk}}">
                 <i class="bi bi-play-circle fs-1" 
-                   style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"
-                   data-toggle="tooltip" 
-                   data-placement="top" 
-                   title="예고편 보기"
-                   >
-                  </i></button>     
-              <a 
-                class="text-reset card-title fw-bold text-decoration-none fs-4" 
-                href="{% url 'movies:detail' movie.pk %}"
+                style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;"
                 data-toggle="tooltip" 
                 data-placement="top" 
-                title="자세히 보기"
+                title="예고편 보기"
                 >
-                  {{ movie.title }}
-              </a>
-            </div>
-          </div>          
-        </div>    
+              </i></button>     
+              <a 
+              class="text-reset card-title fw-bold text-decoration-none fs-4" 
+              href="{% url 'movies:detail' movie.pk %}"
+              data-toggle="tooltip" 
+              data-placement="top" 
+              title="자세히 보기"
+              >
+              {{ movie.title }}
+            </a>
+          </div>
+        </div>          
+      </div>    
       {% comment %} Modal {% endcomment %}
-        <div class="modal fade bg-dark bg-opacity-75" id="exampleModal{{movie.pk}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header bg-warning text-black ">
-                <h5 class="modal-title fs-3" id="exampleModalLabel fw-bold">{{ movie.title }}</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal fade bg-dark bg-opacity-75" id="exampleModal{{movie.pk}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header bg-warning text-black ">
+              <h5 class="modal-title fs-3" id="exampleModalLabel fw-bold">{{ movie.title }}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body bg-black text-white">              
+              <div class="ratio ratio-16x9">
+                <iframe class="embed-responsive-item"  width="560" height="315" src={{"https://www.youtube.com/embed/"|add:movie.trailer_path }} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
               </div>
-              <div class="modal-body bg-black text-white">              
-                <div class="ratio ratio-16x9">
-                  <iframe class="embed-responsive-item"  width="560" height="315" src={{"https://www.youtube.com/embed/"|add:movie.trailer_path }} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-              </div>
+            </div>
               <div class="modal-footer bg-warning bg-opacity-25">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="javascript::player.api('pause')">Close</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <a class="btn btn-warning" role="button" href="{% url 'movies:detail' movie.pk %}">Go to Movie Detail</a>
               </div>
             </div>
           </div>
         </div>     
-      {% endfor %}
-    </div>
+        {% endfor %}
+      </div>
     <a style="position:fixed; bottom:30px; right:30px; z-index: 30;" href="{% url 'quizzes:index'%}" class="bg-warning rounded-circle" >
       <img src="https://kcoupet.com/assets/img/sideMenu/index_hambg_icon12.png" alt="퀴즈 이미지" style="width: 110px;">
     </a>
-  </body>
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% comment %} 모달이 닫힐때 영상이 멈추도록 구성 {% endcomment %}
+<script>
+  $(function(){
+    $('.modal').on('hidden.bs.modal', function (e) {
+      $iframe = $(this).find("iframe");
+      $iframe.attr("src", $iframe.attr("src"));
+    });
+  });
+</script>
+</body>
 {% endblock %} 
