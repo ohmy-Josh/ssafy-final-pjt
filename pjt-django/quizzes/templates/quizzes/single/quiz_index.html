@@ -3,14 +3,20 @@
 
 {% block content %}
 <div class="ms-5" style="margin: 100px auto;">
-  <h1>{{quiz.title}}</h1>
-  <p class="fs-4">{{quiz.description}}</p>
-  <form action="{% url 'quizzes:sin_quiz_play' quiz.pk 0%}" method="POST">
-    {% csrf_token %}
-    <button class="btn btn-warning mb-3">문제 풀기</button>
-  </form>
-  <a href="{% url 'quizzes:sin_index'%}" class="btn btn-secondary">뒤로 가기</a>
-
+  <h1 class="text-center">{{quiz.title}}</h1>
+  <p class="fs-4 text-center">{{quiz.description}}</p>
+  <div class="container position-absolute top-50 start-50 translate-middle">
+    <div class="row justify-content-center">      
+        <form action="{% url 'quizzes:sin_quiz_play' quiz.pk 0%}" method="POST" class="d-flex justify-content-center">
+          {% csrf_token %}
+          <button class="btn btn-warning ms-3 p-5 fs-1 col-4">문제 풀기</button>
+        </form>      
+    </div>
+    <div class="row justify-content-center">
+      <a href="{% url 'quizzes:sin_index'%}" class="btn btn-secondary col-2 ms-3 mt-3">뒤로 가기</a>
+    </div>
+  </div>
+  </div>  
 </div>
 
 {% endblock %}

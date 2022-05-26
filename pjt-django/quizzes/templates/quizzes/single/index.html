@@ -3,10 +3,18 @@
 
 {% block content %}
 <div class="ms-5" style="margin: 100px auto;">
-  <h1 class="mb-5">Single INDEX</h1>
-  {% for quiz in quizzes %}
-  <a href="{% url 'quizzes:sin_quiz_index' quiz.pk %}" class="text-decoration-none btn btn-warning">{{quiz.title}}</a>
-  {% endfor %}
+  <div class="mb-3 d-flex justify-content-center">    
+    <img src="{% static 'logo-img/single-logo.png' %}" class="card-img-top ms-5" alt="quiz-logo" style="width: 800px;">
+  </div>  
+  <div class="container position-absolute top-50 start-50 translate-middle">
+    <div class="row flex-column align-items-center">
+      {% for quiz in quizzes %}
+      <a href="{% url 'quizzes:sin_quiz_index' quiz.pk %}" class="text-decoration-none btn btn-warning btn-lg col-5 my-2 p-4 fs-3">
+        {{quiz.title}}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
 {% endblock %}

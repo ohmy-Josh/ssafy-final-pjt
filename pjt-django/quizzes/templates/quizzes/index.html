@@ -3,15 +3,15 @@
 
 {% block content %}
 <div  class="ms-5" style="margin: 100px auto;">
-  <h1>QUIZ INDEX</h1>
-  <div class="mx-5 mt-3">
-    <a class="card mb-3" href="{% url 'quizzes:sin_index' %}">
-      <img src="{% static 'logo-img/single-mode-logo.gif' %}" class="card-img-top" alt="...">    
+  <div class="d-flex justify-content-center">
+    <img src="{% static 'logo-img/quiz-logo.png' %}" class="card-img-top" alt="quiz-logo" style="width: 400px;">
+  </div>
+  <div class="mx-5 mt-3 d-flex justify-content-center ">
+    <a class="card me-3 rounded" href="{% url 'quizzes:sin_index' %}" style="width: 600px;">
+      <img src="{% static 'logo-img/single-mode-logo.gif' %}" class="card-img-top rounded" alt="...">    
     </a>
-    <a class="card">
-      <div>
-      </div>  
-        <img src="{% static 'logo-img/recreation-logo.gif' %}" class="card-img-top" alt="...">    
+    <a class="card rounded" style="width: 600px;">      
+        <img src="{% static 'logo-img/recreation-logo.gif' %}" class="card-img-top rounded" alt="..." >    
     </a>
   </div>
 </div>

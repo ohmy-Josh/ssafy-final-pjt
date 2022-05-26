@@ -51,7 +51,7 @@
       <h5 class="mt-3 fw-bold mb-4 p-3 bg-dark text-white bg-gradient">감독의 관련 영화</h5>      
       <div class="row row-cols-1  row-cols-md-2  row-cols-xl-3 row-cols-xxl-4 mt-3">
           {% for director_movie in director_movies %} 
-            <div class="main-container col mb-4">
+            <div class="main-container col mb-2">
               <div class="img-container card bg-dark text-white" style="width: 10rem;">          
                 <img src={{ "https://www.themoviedb.org/t/p/w300_and_h450_bestv2"|add:director_movie.poster_path }} class="card-img img-thumbnail" alt="포스터 이미지">
                 <div class="card-img-overlay d-flex align-items-end justify-content-center">                  
@@ -66,7 +66,7 @@
       <h5 class="mt-3 fw-bold mb-4 p-3 bg-dark text-white bg-gradient">배우의 관련 영화</h5>
       <div class="row row-cols-1 row-cols-md-2  row-cols-xl-3 row-cols-xxl-4 mt-3">
         {% for actor_movie in actor_movies  %}
-          <div class="main-container col mb-3">
+          <div class="main-container col mb-2">
             <div class="img-container card bg-dark text-white" style="width: 10rem;">          
               <img src={{ "https://www.themoviedb.org/t/p/w300_and_h450_bestv2"|add:actor_movie.poster_path }} class="card-img img-thumbnail" alt="포스터 이미지">
               <div class="card-img-overlay d-flex align-items-end justify-content-center">                  
@@ -99,7 +99,7 @@
     </div>  
     <hr>    
     {% if reviews|length %}
-      <p class="fw-bold ms-4 bg-white text-dark rounded p-2 col-5 col-sm-4 col-md-3 col-xl-2" >{{ reviews|length }}개의 댓글이 있습니다.</p>
+      <p class="fw-bold ms-4 bg-white text-dark rounded p-2 col-1 col-sm-1 col-md-1 col-xl-1" >댓글({{ reviews|length }})</p>
     {% endif %}    
     <hr>
     <div class="review_list mb-5 mt-3 ms-4 bg-white text-dark rounded" style="width: 95%;">

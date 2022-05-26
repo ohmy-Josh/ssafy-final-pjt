@@ -53,7 +53,7 @@
         <div class="modal fade bg-dark bg-opacity-75" id="exampleModal{{movie.pk}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
-              <div class="modal-header bg-black text-white ">
+              <div class="modal-header bg-warning text-black ">
                 <h5 class="modal-title fs-3" id="exampleModalLabel fw-bold">{{ movie.title }}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
@@ -62,9 +62,9 @@
                   <iframe class="embed-responsive-item"  width="560" height="315" src={{"https://www.youtube.com/embed/"|add:movie.trailer_path }} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
               </div>
-              <div class="modal-footer">
+              <div class="modal-footer bg-warning bg-opacity-25">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="javascript::player.api('pause')">Close</button>
-                <a class="btn btn-dark" role="button" href="{% url 'movies:detail' movie.pk %}">Go to Movie Detail</a>
+                <a class="btn btn-warning" role="button" href="{% url 'movies:detail' movie.pk %}">Go to Movie Detail</a>
               </div>
             </div>
           </div>
