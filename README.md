@@ -1,6 +1,4 @@
-환상의 영화
-
-
+# 환상의 영화
 
 ## 프로젝트 소개 
 
@@ -88,8 +86,12 @@
 
 **[싱글 모드]**
 
-- 퀴즈 형식에 따라 랜덤 문제 생성
-- 퀴즈 결과를 통해 추천 영화 제공
+![quiz_single](documents/page_img/quiz_single.gif)
+
+![quiz_result](documents/page_img/quiz_result.gif)
+
+- 제공된 퀴즈 형식에 따라 랜덤 문제 생성
+- 퀴즈 결과를 통해 추천 영화 제공, 카드를 통해 상세 페이지로 연결
 
 
 
