@@ -1,4 +1,4 @@
-# 환상의 영화
+환상의 영화
 
 
 
@@ -32,24 +32,47 @@
 
 ### - 🧾 Account 
 
-[회원가입]
+![account_nav](documents/page_img/account_nav.gif)
 
-[로그인]
+- 메인 페이지의 toggle menu를 통해 account 관련 기능 접근  
 
-[회원정보수정]
+
+
+**[회원가입]**
+
+![accounts_signup](documents/page_img/accounts_signup.jpg)
+
+**[로그인]**
+
+![accounts_login](documents/page_img/accounts_login.jpg)
+
+**[회원정보수정]**
+
+![accounts_update](documents/page_img/accounts_update.jpg)
 
 
 
 ### - 🎞 Movie  
 
-[메인 페이지]
+**[메인 페이지]**
 
-- 최신 영화 카드 제공
-- 영화 예고편 제공
+![movie_index](documents/page_img/movie_index.gif)
 
-[상세 페이지]
+- 최신 영화 순으로 카드 제공
+- 호버를 통한 디자인 구현
+
+- 영화 예고편 모달 제공
+
+
+
+**[상세 페이지]**
+
+![moive_detail](documents/page_img/moive_detail.gif)
+
+![movie_review](documents/page_img/movie_review.jpg)
 
 - 영화 상세 정보 제공
+
 - 감독, 배우 관련 추천 영화 제공
 - 유저들의 댓글 리뷰 작성 기능
 
@@ -57,13 +80,19 @@
 
 ### - 📝 Quiz 
 
-[싱글 모드]
+![quiz_index](documents/page_img/quiz_index.gif)
+
+- 메인 페이지의 quiz 아이콘을 통해 접근 가능  
+
+
+
+**[싱글 모드]**
 
 - 퀴즈 형식에 따라 랜덤 문제 생성
 - 퀴즈 결과를 통해 추천 영화 제공
 
 
 
-[레크레이션 모드]
+**[레크레이션 모드]**
 
 - (미구현)
